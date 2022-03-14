@@ -1,11 +1,22 @@
 import Navigation from "./components/layout/navigation/navbar/NavBar";
-import HeroSection from "./components/layout/hero/HeroSection";
+import { Routes, Route } from 'react-router-dom';
+import { useTransition, animated } from 'react-spring';
 
-function App() {
+import Home from './views/Home';
+import About from './views/About';
+import Portfolio from './views/Portfolio';
+import Contact from './views/Contact';
+
+const App = () => {
   return (
     <>
-      <Navigation/>
-      <HeroSection/>
+      <Navigation />
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/about" element={<About/>} />
+        <Route exact path="/portfolio" element={<Portfolio/>} />
+        <Route exact path="/contact" element={<Contact/>} />
+      </Routes>
     </>
   );
 }
