@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/juando_resume/static/css/main.1a8a0596.css",
-    "main.js": "/juando_resume/static/js/main.b22a47ce.js",
+    "main.js": "/juando_resume/static/js/main.bb793b1a.js",
     "static/js/787.f1e2a2be.chunk.js": "/juando_resume/static/js/787.f1e2a2be.chunk.js",
-    "static/media/logo.png": "/juando_resume/static/media/logo.61b5f6ecdd4da6352abd.png",
     "index.html": "/juando_resume/index.html",
     "main.1a8a0596.css.map": "/juando_resume/static/css/main.1a8a0596.css.map",
-    "main.b22a47ce.js.map": "/juando_resume/static/js/main.b22a47ce.js.map",
+    "main.bb793b1a.js.map": "/juando_resume/static/js/main.bb793b1a.js.map",
     "787.f1e2a2be.chunk.js.map": "/juando_resume/static/js/787.f1e2a2be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a8a0596.css",
-    "static/js/main.b22a47ce.js"
+    "static/js/main.bb793b1a.js"
   ]
 }
