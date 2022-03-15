@@ -1,5 +1,5 @@
-import { Paragraph } from "../components/text";
-import Animation from "../utils/animation";
+import { Paragraph } from "../../components/text";
+import Animation from "../../utils/animation";
 
 const Portfolio = () => {
   return (
