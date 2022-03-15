@@ -1,10 +1,13 @@
 import { Paragraph } from "../components/text";
+import Animation from "../utils/animation";
 
 const Contact = () => {
   return (
-    <Paragraph>
+    <Animation transition={.25}>
+      <Paragraph>
         Contact
-    </Paragraph>
+      </Paragraph>
+    </Animation>
   );
 }
 

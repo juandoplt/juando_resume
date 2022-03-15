@@ -1,14 +1,14 @@
 import { Paragraph } from "../components/text";
 import Animation from "../utils/animation";
 
-const Portfolio = () => {
+const NotFound = () => {
   return (
     <Animation transition={.25}>
       <Paragraph>
-        Portfolio
+        Not Found
       </Paragraph>
     </Animation>
   );
 }
 
-export default Portfolio;
+export default NotFound;
