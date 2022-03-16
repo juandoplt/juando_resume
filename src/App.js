@@ -21,7 +21,7 @@ const App = () => {
       <Navigation />
       <AnimatePresence exitBeforeEnter>
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route exact index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/fpd" element={<FpdPage />} />

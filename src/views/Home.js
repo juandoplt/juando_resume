@@ -9,7 +9,7 @@ import Software from "../components/layout/Software";
 
 const Home = () => {
   return (
-    <Animation transition={.25}>
+    <Animation transition={.45}>
       <HeroSection />
       <HomePortfolioGrid />
       <LanguageSkill />

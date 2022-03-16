@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const FpdPage = () => {
   return (
-    <Animation transition={.25}>
+    <Animation transition={.45}>
       <Paragraph>
         FpdPageasdasdasd
       </Paragraph>

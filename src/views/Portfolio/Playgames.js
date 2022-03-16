@@ -3,7 +3,7 @@ import Animation from "../../utils/animation";
 
 const PlaygamesPage = () => {
   return (
-    <Animation transition={.25}>
+    <Animation transition={.45}>
       <Paragraph>
         PlaygamesPage
       </Paragraph>

@@ -3,7 +3,7 @@ import Animation from "../../utils/animation";
 
 const Portfolio = () => {
   return (
-    <Animation transition={.25}>
+    <Animation transition={.45}>
       <Paragraph>
         Portfolio
       </Paragraph>
