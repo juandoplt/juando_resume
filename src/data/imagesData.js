@@ -1,8 +1,23 @@
 export const images = [
-  "screen0",
-  "5b5a3628f950b7390fbfc5f8/1532639027872/DSCF3246",
-  "5b5a3741575d1fccb5ac6b3f/1532639066455/DSCF3268",
-  "5b5a376b0e2e728eeeaca8e4/1532683586969/DSCF3274",
-  "5b5c228403ce64f3c80d4d8e/1532764845121/DSCF3348",
-  "5b5a3b800e2e728eeead9575/1532640158813/DSCF3375"
+  {
+    id: "c61c2333-b5d4-4226-b505-c0843daf59e8",
+    project: "fpd",
+    thumb: "screen0",
+  },
+  {
+    id: "64dc8084-d779-4774-bd50-d1da1ed74f67",
+    project: "laddercup",
+    thumb: "screen1",
+  },
+  {
+    id: "b7497728-869c-4df1-9b8b-6dae694999c4",
+    project: "playgames",
+    thumb: "screen3",
+  },
+  {
+    id: "48847a7b-e9f7-4c4a-a01a-24d3f4609b23",
+    project: "mastenis",
+    thumb: "screen4",
+  },
+
 ];

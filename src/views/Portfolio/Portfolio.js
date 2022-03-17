@@ -34,7 +34,7 @@ const imageVariants = {
   hover: { scale: 1.1 }
 };
 
-const Thumbnail = ({ id, i }) => (
+const Thumbnail = ({ id,project,thumb, i }) => (
   <motion.div className="thumbnail" variants={thumbnailVariants}>
     <motion.div
       className="frame"
@@ -44,7 +44,7 @@ const Thumbnail = ({ id, i }) => (
     >
       <Link to={`/image/${i}`}>
         <motion.img
-          src={`https://juandoplt.github.io/juando_resume/img/${id}.jpg`}
+          src={`https://juandoplt.github.io/juando_resume/img/portfolio/${project}/${thumb}.jpg`}
           alt="The Barbican"
           variants={imageVariants}
           transition={transition}
@@ -69,9 +69,9 @@ const Portfolio = () => {
                 exit="exit"
                 variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
               >
-                {images.map((id, i) => (
-                  <Thumbnail key={id} id={id} i={i} />
-                ))}
+                {images.map((item, i) => {
+                  return (<Thumbnail key={item['id']} id={item['id']} i={i} project={item["project"]} thumb={item["thumb"]} />)
+                })}
               </motion.div>
             </Col>
           </Row>
