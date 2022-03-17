@@ -8,11 +8,7 @@ import { images } from "../../data/imagesData";
 
 import styled, { css } from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
-
-const Section = styled.div`
-    padding-top:5rem;
-    padding-bottom:5rem;
-`
+import Section from '../../components/general/Section';
 
 const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -67,7 +63,7 @@ const Thumbnail = ({ id, project, thumb, i }) => (
 const Portfolio = () => {
   return (
     <Animation transition={.45}>
-      <Section>
+      <Section paddingBottom="5%" paddingTop="7%">
         <Container>
           <Row>
             <Col>

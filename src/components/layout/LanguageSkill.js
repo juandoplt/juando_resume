@@ -6,6 +6,7 @@ import {
 
 import styled from 'styled-components';
 import { Paragraph, Title } from '../text';
+import Separator from '../general/Separator';
 
 const Section = styled.div`
     padding-top:6rem;
@@ -13,8 +14,8 @@ const Section = styled.div`
     background: #000000;
 `
 const SpecialTitle = styled.h1`
-    line-height: 5.5rem;
-    font-size: 5rem;
+    line-height: 1.2;
+    font-size: 3rem;
     letter-spacing: -2px;
     text-transform: uppercase;
     transform: skew(0deg,5deg);
@@ -25,7 +26,12 @@ const SpecialTitle = styled.h1`
     -ms-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    max-width:50%
+    max-width: 100%;
+    @media (min-width: 576px) { 
+        max-width:50%;
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
 `
 const Span = styled.span`
     color: #FFF;
@@ -70,11 +76,7 @@ const SpecialCol = styled(Col)`
 const LanguageSkill = () => {
     return (
         <>
-            <div>
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{ background: "black" }}>
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" style={{ fill: "#212529" }}></path>
-                </svg>
-            </div>
+            <Separator fill="#212529" backgroundColor="black" />
             <Section>
                 <Container>
                     <Row>
@@ -86,11 +88,7 @@ const LanguageSkill = () => {
                     </Row>
                 </Container>
             </Section>
-            <div style={{ backgroundColor: "#e9ecef" }} >
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
-                </svg>
-            </div>
+            <Separator fill="black" backgroundColor="#e9ecef" />
         </>
     );
 }

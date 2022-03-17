@@ -5,31 +5,21 @@ import {
 } from 'react-bootstrap';
 
 import { Title, Paragraph } from '../../text/';
-import styled from 'styled-components';
-
-const Section = styled.div`
-    padding-top:20%;
-    padding-bottom:15%;
-`
-
-const Text = styled(Paragraph)`
-  color:#3a3a3a;
-  font-size:1.3rem;
-  margin-top:1rem;
-`
+import Section from '../../general/Section';
+import Separator from '../../general/Separator';
 
 function HeroSection() {
   return (
-    <Section>
+    <Section paddingTop="20%" paddingBottom="15%">
       <Container>
         <Row>
           <Col>
-            <Title size="3rem">
+            <Title size="3rem" fontWeight="bold">
               Hola, soy juando. Argentino, Diseñador UX/UI.
             </Title>
-            <Text>
+            <Paragraph color="#3a3a3a" fontSize="1.3rem" marginTop="1rem">
               En los últimos años me dedique al desarrollo de nuevos productos mobile, desde estrategias de marketing, branding, campañas de anuncios y diseño.
-            </Text>
+            </Paragraph>
           </Col>
         </Row>
       </Container>

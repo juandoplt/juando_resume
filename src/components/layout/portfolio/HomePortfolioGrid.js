@@ -7,12 +7,9 @@ import {
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { Paragraph, Title } from '../../text';
+import Section from '../../general/Section';
+import Separator from '../../general/Separator';
 
-const Section = styled.div`
-    padding-top:6rem;
-    padding-bottom:5rem;
-    background: #212529;
-`
 const FirstTitle = styled(Title)`
     margin-bottom: 3rem;
     font-size: 2.5rem;
@@ -32,15 +29,11 @@ const FirstTitle = styled(Title)`
 const HomePortfolioGrid = () => {
     return (
         <>
-            <div className="custom-shape-divider-top-1646170831" style={{ background: "#212529" }}>
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style={{ fill: "white" }}>
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z"></path>
-                </svg>
-            </div>
-            <Section className="portfolioGrid">
+            <Separator fill="white" backgroundColor="#212529" />
+            <Section paddingBottom="5%" paddingTop="5%" backgroundColor="#212529">
                 <Container>
                     <Row>
-                    <FirstTitle textAlign="center">Mi experiencia</FirstTitle>
+                        <FirstTitle textAlign="center">Mi experiencia</FirstTitle>
 
                         <Col lg={6} style={{ paddingBottom: 12 }}>
                             <Link to="/fpd" className="nav-link" style={{
