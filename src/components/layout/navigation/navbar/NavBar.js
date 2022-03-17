@@ -28,7 +28,7 @@ function Navigation() {
 const Navigation = () => {
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
         <Container>
           <Link to="/" className="navbar-brand">Juando</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -53,8 +53,12 @@ const SpecialCol = styled(Col)`
     align-items: center;
     display: flex;
     flex-direction: column;
+    &:hover{
+        cursor:default
+    }
     &:hover ${SpanEffect}{
         color:#a789dd;
+        
     }
     &:hover ${Span} {
         opacity: .3;

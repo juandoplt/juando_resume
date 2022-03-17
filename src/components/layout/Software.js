@@ -18,13 +18,15 @@ const Section = styled.div`
 `
 
 const FirstTitle = styled(Title)`
-    color: #fff;
-    margin-bottom:3rem;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:#fff;
     &:after{
         content: '';
         height: 2px;
         background: #d5d5d5;
-        width: 20%;
+        width: 10%;
         display: block;
         margin: 1rem auto;
     }
@@ -42,6 +44,10 @@ const List = styled.ul`
 
 const Image = styled.img`
     max-width: 35px;
+`
+
+const WhiteImage = styled.img`
+    filter: brightness(0) invert(1);
 `
 
 const ListItem = styled.li`
@@ -99,11 +105,11 @@ const Software = () => {
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Xcode</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/github_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/github_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Github</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/vs_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/vs_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">VS Code</Paragraph>
                                 </ListItem>
                                 <ListItem>
@@ -111,11 +117,11 @@ const Software = () => {
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">React</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/php_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/php_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">PHP</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/mysql_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/mysql_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Mysql</Paragraph>
                                 </ListItem>
                                 <ListItem>
@@ -126,19 +132,19 @@ const Software = () => {
 
                             <List>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/wp_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/wp_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Wordpress</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/jekyll_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/jekyll_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Jekyll</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/camera_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/camera_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Fotografía</Paragraph>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/pencil_icon.png'}`} className="invert_colour" alt="" />
+                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/pencil_icon.png'}`} className="invert_colour" alt="" />
                                     <Paragraph size=".8rem" color="#FFF" textAlign="center">Prototipos</Paragraph>
                                 </ListItem>
                             </List>

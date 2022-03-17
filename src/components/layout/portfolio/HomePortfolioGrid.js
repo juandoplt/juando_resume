@@ -13,7 +13,20 @@ const Section = styled.div`
     padding-bottom:5rem;
     background: #212529;
 `
-
+const FirstTitle = styled(Title)`
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color:#fff;
+    &:after{
+        content: '';
+        height: 2px;
+        background: #d5d5d5;
+        width: 10%;
+        display: block;
+        margin: 1rem auto;
+    }
+`
 
 
 const HomePortfolioGrid = () => {
@@ -27,9 +40,8 @@ const HomePortfolioGrid = () => {
             <Section className="portfolioGrid">
                 <Container>
                     <Row>
-                        <Title type="H1">
-                            Mi experiencia
-                        </Title>
+                    <FirstTitle textAlign="center">Mi experiencia</FirstTitle>
+
                         <Col lg={6} style={{ paddingBottom: 12 }}>
                             <Link to="/fpd" className="nav-link" style={{
                                 backgroundImage: `url(${process.env.PUBLIC_URL + '/img/background_fpd.jpg'})`,
@@ -37,7 +49,7 @@ const HomePortfolioGrid = () => {
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                minHeight: "340px"
+                                minHeight: "390px"
                             }}>
                                 <img src={`${process.env.PUBLIC_URL + '/img/fpd_logo.png'}`} style={{ maxWidth: "26%" }} />
                             </Link>
@@ -49,7 +61,7 @@ const HomePortfolioGrid = () => {
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                minHeight: "340px"
+                                minHeight: "390px"
                             }}>
                                 <img src={`${process.env.PUBLIC_URL + '/img/ladder_logo.png'}`} style={{ maxWidth: "26%" }} />
                             </Link>
@@ -61,7 +73,7 @@ const HomePortfolioGrid = () => {
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                minHeight: "340px"
+                                minHeight: "390px"
                             }}>
                                 <img src={`${process.env.PUBLIC_URL + '/img/playgames_logo.png'}`} style={{ maxWidth: "26%" }} />
                             </Link>
@@ -73,7 +85,7 @@ const HomePortfolioGrid = () => {
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                minHeight: "340px"
+                                minHeight: "390px"
                             }}>
                                 <img src={`${process.env.PUBLIC_URL + '/img/mastenis_logo.png'}`} style={{ maxWidth: "26%" }} />
                             </Link>
