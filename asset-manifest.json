@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/juando_resume/static/css/main.f30e129b.css",
-    "main.js": "/juando_resume/static/js/main.d9834367.js",
+    "main.js": "/juando_resume/static/js/main.843bc5f5.js",
     "static/js/787.f1e2a2be.chunk.js": "/juando_resume/static/js/787.f1e2a2be.chunk.js",
     "static/media/cv.pdf": "/juando_resume/static/media/cv.ac4ae170d08667681c67.pdf",
     "index.html": "/juando_resume/index.html",
     "main.f30e129b.css.map": "/juando_resume/static/css/main.f30e129b.css.map",
-    "main.d9834367.js.map": "/juando_resume/static/js/main.d9834367.js.map",
+    "main.843bc5f5.js.map": "/juando_resume/static/js/main.843bc5f5.js.map",
     "787.f1e2a2be.chunk.js.map": "/juando_resume/static/js/787.f1e2a2be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f30e129b.css",
-    "static/js/main.d9834367.js"
+    "static/js/main.843bc5f5.js"
   ]
 }
