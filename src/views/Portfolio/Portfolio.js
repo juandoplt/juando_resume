@@ -34,7 +34,15 @@ const imageVariants = {
   hover: { scale: 1.1 }
 };
 
-const Thumbnail = ({ id,project,thumb, i }) => (
+const MotionDiv = styled(motion.div)`
+  display: flex;
+  justify-content: space-between;
+`
+
+
+
+
+const Thumbnail = ({ id, project, thumb, i }) => (
   <motion.div className="thumbnail" variants={thumbnailVariants}>
     <motion.div
       className="frame"
@@ -42,9 +50,10 @@ const Thumbnail = ({ id,project,thumb, i }) => (
       variants={frameVariants}
       transition={transition}
     >
-      <Link to={`/image/${i}`}>
+      <Link to={`/${project}`}>
         <motion.img
-          src={`https://juandoplt.github.io/juando_resume/img/portfolio/${project}/${thumb}.jpg`}
+          //src={`/img/portfolio/${project}/${thumb}.jpg`}
+          src={`${process.env.PUBLIC_URL + '/img/portfolio/' + project + '/' + thumb + '.jpg'}`}
           alt="The Barbican"
           variants={imageVariants}
           transition={transition}
@@ -62,7 +71,7 @@ const Portfolio = () => {
         <Container>
           <Row>
             <Col>
-              <motion.div
+              <MotionDiv
                 className="thumbnails"
                 initial="initial"
                 animate="enter"
@@ -72,7 +81,7 @@ const Portfolio = () => {
                 {images.map((item, i) => {
                   return (<Thumbnail key={item['id']} id={item['id']} i={i} project={item["project"]} thumb={item["thumb"]} />)
                 })}
-              </motion.div>
+              </MotionDiv>
             </Col>
           </Row>
         </Container>
