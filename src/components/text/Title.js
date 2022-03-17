@@ -7,6 +7,8 @@ const Title = styled.h1`
         text-align:${props => props.textAlign || "left"};
         font-weight:${props => props.fontWeight || "normal"};
         letter-spacing:${props => props.letterSpacing || "normal"};
+        text-transform: ${props => props.textTransform || "none"};
+        color: ${props => props.color || "#000"};
     `;
 
 export default Title;
