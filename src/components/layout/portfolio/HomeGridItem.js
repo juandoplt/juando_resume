@@ -40,6 +40,7 @@ const ImageStyle = {
 const HomeGridItem = ({
     backgroundImage,
     logoImage,
+    delay,
     marginBottom,
     to
 }) => {
@@ -49,7 +50,7 @@ const HomeGridItem = ({
         rest: {
             scale: .98,
             y: 0,
-            filter:"drop-shadow(0px 0px 1px rgba(0,0,0,0.15)",
+            filter: "drop-shadow(0px 0px 1px rgba(0,0,0,0.15)",
             transition: {
                 duration: .3,
                 type: "tween",
@@ -59,7 +60,7 @@ const HomeGridItem = ({
         hover: {
             scale: 1.1,
             y: -10,
-            filter:"drop-shadow(0px 0px 15px rgba(0,0,0,1))",
+            filter: "drop-shadow(0px 0px 15px rgba(0,0,0,1))",
             transition: {
                 duration: 0.2,
                 type: "tween",
@@ -72,7 +73,7 @@ const HomeGridItem = ({
         rest: {
             scale: 1,
             filter: "grayscale(0%)",
-            opacity:.5,
+            opacity: .5,
             ease: "easeOut",
             duration: 0.2,
             type: "tween"
@@ -91,11 +92,18 @@ const HomeGridItem = ({
 
     return (
         <Col lg={6}>
-            <motion.div initial="rest" whileHover="hover" animate="rest">
-                <GoLink to={to} >
-                    <motion.span style={{ ...spanStyle, backgroundImage: backgroundImage }} variants={backgroundMotion} />
-                    <motion.img src={logoImage} variants={textMotion} style={ImageStyle} />
-                </GoLink>
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay }}
+                viewport={{ once: true }}
+            >
+                <motion.div initial="rest" whileHover="hover" animate="rest">
+                    <GoLink to={to} >
+                        <motion.span style={{ ...spanStyle, backgroundImage: backgroundImage }} variants={backgroundMotion} />
+                        <motion.img src={logoImage} variants={textMotion} style={ImageStyle} />
+                    </GoLink>
+                </motion.div>
             </motion.div>
         </Col>
     );

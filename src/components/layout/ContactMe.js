@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import {
     Row,
     Container,
@@ -19,16 +21,24 @@ const ContactMe = () => {
             <Section>
                 <Row>
                     <Col>
-                        <Title textAlign="center">
-                            GRACIAS POR VISITARME 😊
-                        </Title>
-                        <SubTitle textAlign="center">
-                            Si queres contactarme
-                        </SubTitle>
-                        <Paragraph textAlign="center">
-                            👇 👇 👇
-                        </Paragraph>
-                        <ProfileCard />
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: .8 }}
+                            viewport={{ once: true }}
+                        >
+                            <Title textAlign="center">
+                                GRACIAS POR VISITARME 😊
+                            </Title>
+                            <SubTitle textAlign="center">
+                                Si queres contactarme
+                            </SubTitle>
+                            <Paragraph textAlign="center">
+                                👇 👇 👇
+                            </Paragraph>
+                            <ProfileCard />
+                        </motion.div>
+
                     </Col>
                 </Row>
             </Section>

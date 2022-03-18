@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import {
     Row,
     Container,
@@ -81,9 +83,16 @@ const LanguageSkill = () => {
                 <Container>
                     <Row>
                         <SpecialCol>
-                            <SpecialTitle>
-                                <Span>MI IDIOMA NATIVO ES </Span><SpanEffect>ESPAÑOL</SpanEffect><Span>, ALTHOUGH </Span><Span>I ALSO SPEAK AND WRITE </Span><SpanEffect>ENGLISH </SpanEffect><Span>FLUENTLY</Span>
-                            </SpecialTitle>
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: .4 }}
+                                viewport={{ once: true }}
+                            >
+                                <SpecialTitle>
+                                    <Span>MI IDIOMA NATIVO ES </Span><SpanEffect>ESPAÑOL</SpanEffect><Span>, ALTHOUGH </Span><Span>I ALSO SPEAK AND WRITE </Span><SpanEffect>ENGLISH </SpanEffect><Span>FLUENTLY</Span>
+                                </SpecialTitle>
+                            </motion.div>
                         </SpecialCol>
                     </Row>
                 </Container>

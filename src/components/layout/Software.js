@@ -68,8 +68,14 @@ const Software = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <FirstTitle textAlign="center">Herramientas, software y técnicas más ulitizados en mi carrera.</FirstTitle>
-
+                            <motion.div
+                                initial={{ opacity: 0,y:10}}
+                                whileInView={{ opacity: 1,y:0 }}
+                                transition={{ delay: .4 }}
+                                viewport={{ once: true }}
+                            >
+                                <FirstTitle textAlign="center" fontWeight="bold">Herramientas, software y técnicas más ulitizados en mi carrera.</FirstTitle>
+                            </motion.div>
                             <List>
                                 <ListItem>
                                     <motion.div

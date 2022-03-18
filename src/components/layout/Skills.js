@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import {
     Row,
     Container,
@@ -97,72 +99,266 @@ const Skills = () => {
             <Section>
                 <Container>
                     <RealRow>
-                        <FirstTitle color="#000" textAlign="center">Habilidades</FirstTitle>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: .4 }}
+                            viewport={{ once: true }}
+                        >
+                            <FirstTitle color="#000" textAlign="center" fontWeight="bold">Habilidades</FirstTitle>
+                        </motion.div>
                         <Col lg={5}>
-                            {/* <Image src={`${process.env.PUBLIC_URL + '/img/brain.png'}`} alt="" /> */}
-                            <Lottie
-                                options={defaultOptions}
-                                height={250}
-                                width={400}
-                                style={{
-                                    pointerEvents: "none"
-                                }}
-                            />
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: .2 }}
+                                viewport={{ once: true }}
+                            >
+                                <Lottie
+                                    options={defaultOptions}
+                                    height={250}
+                                    width={400}
+                                    style={{
+                                        pointerEvents: "none"
+                                    }}
+                                />
+                            </motion.div>
                         </Col>
                         <Col lg={7}>
-                            <List>
-                                <ListItem>
-                                    <span>Diseño UX / UI</span>
-                                    <SkillDots>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <Dot></Dot>
-                                    </SkillDots>
-                                </ListItem>
-                                <ListItem>
-                                    <span>Desarrollo de productos</span>
-                                    <SkillDots>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotHalfActive></DotHalfActive>
-                                    </SkillDots>
-                                </ListItem>
-                                <ListItem>
-                                    <span>Frontend - Dev</span>
-                                    <SkillDots>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <Dot></Dot>
-                                    </SkillDots>
-                                </ListItem>
-                                <ListItem>
-                                    <span>App mobile - Dev</span>
-                                    <SkillDots>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <Dot></Dot>
-                                        <Dot></Dot>
-                                    </SkillDots>
-                                </ListItem>
-                                <ListItem>
-                                    <span>Backend - Dev</span>
-                                    <SkillDots>
-                                        <DotActive></DotActive>
-                                        <DotActive></DotActive>
-                                        <Dot></Dot>
-                                        <Dot></Dot>
-                                        <Dot></Dot>
-                                    </SkillDots>
-                                </ListItem>
-                            </List>
-
+                            <motion.div
+                                initial={{ opacity: 0,y:-10 }}
+                                whileInView={{ opacity: 1,y:0 }}
+                                transition={{ delay: .3 }}
+                                viewport={{ once: true }}
+                            >
+                                <List>
+                                    <ListItem>
+                                        <span>Diseño UX / UI</span>
+                                        <SkillDots>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .2 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .3 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .4 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .5 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .6 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                        </SkillDots>
+                                    </ListItem>
+                                    <ListItem>
+                                        <span>Desarrollo de productos</span>
+                                        <SkillDots>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .7 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .8 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: .9 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.1 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotHalfActive></DotHalfActive>
+                                            </motion.div>
+                                        </SkillDots>
+                                    </ListItem>
+                                    <ListItem>
+                                        <span>Frontend - Dev</span>
+                                        <SkillDots>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.2 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.3 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.4 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.5 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.6 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                        </SkillDots>
+                                    </ListItem>
+                                    <ListItem>
+                                        <span>App mobile - Dev</span>
+                                        <SkillDots>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.7 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.8 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 1.9 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2.1 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                        </SkillDots>
+                                    </ListItem>
+                                    <ListItem>
+                                        <span>Backend - Dev</span>
+                                        <SkillDots>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2.2 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2.3 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <DotActive></DotActive>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2.4 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2.5 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ delay: 2.6 }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <Dot></Dot>
+                                            </motion.div>
+                                        </SkillDots>
+                                    </ListItem>
+                                </List>
+                            </motion.div>
                         </Col>
                     </RealRow>
                 </Container>
