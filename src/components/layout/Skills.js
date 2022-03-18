@@ -7,6 +7,12 @@ import {
 import styled from 'styled-components';
 import Separator from '../general/Separator';
 import { Paragraph, Title } from '../text';
+import Lottie from 'react-lottie';
+import * as animationData from '../../assets/animations/brain.json'
+
+const RealRow = styled(Row)`
+    align-items: center;
+`
 
 const Section = styled.div`
     padding-top:6rem;
@@ -75,14 +81,33 @@ const Image = styled.img`
 
 
 const Skills = () => {
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        controls: false,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice"
+        }
+    };
+
+
     return (
         <>
             <Section>
                 <Container>
-                    <Row>
+                    <RealRow>
                         <FirstTitle color="#000" textAlign="center">Habilidades</FirstTitle>
                         <Col lg={5}>
-                            <Image src={`${process.env.PUBLIC_URL + '/img/brain.png'}`} alt="" />
+                            {/* <Image src={`${process.env.PUBLIC_URL + '/img/brain.png'}`} alt="" /> */}
+                            <Lottie
+                                options={defaultOptions}
+                                height={250}
+                                width={400}
+                                style={{
+                                    pointerEvents: "none"
+                                }}
+                            />
                         </Col>
                         <Col lg={7}>
                             <List>
@@ -139,7 +164,7 @@ const Skills = () => {
                             </List>
 
                         </Col>
-                    </Row>
+                    </RealRow>
                 </Container>
             </Section>
             <Separator fill="#e9ecef" backgroundColor="white" />
