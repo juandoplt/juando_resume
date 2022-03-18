@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 
 const Title = styled.h1`
+        position:relative;
         font-size:  ${props => props.size || "1.8rem"};
         text-align:${props => props.textAlign || "left"};
         font-weight:${props => props.fontWeight || "normal"};

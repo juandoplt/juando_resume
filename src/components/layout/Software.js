@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import {
     Row,
     Container,
@@ -7,6 +8,7 @@ import {
 import styled from 'styled-components';
 import Separator from '../general/Separator';
 import { Paragraph, Title } from '../text';
+
 
 const Section = styled.div`
     padding-top:6rem;
@@ -44,7 +46,7 @@ const List = styled.ul`
 `
 
 const Image = styled.img`
-    max-width: 35px;
+    max-width: 50px;
 `
 
 const WhiteImage = styled.img`
@@ -70,79 +72,197 @@ const Software = () => {
 
                             <List>
                                 <ListItem>
-
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/ps_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Photoshop</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .2 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/ps_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Photoshop</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/ai_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Illustrator</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .3 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/ai_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Illustrator</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/xd_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Adobe XD</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .4 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/xd_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Adobe XD</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/ae_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">After Effects</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .5 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/ae_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">After Effects</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/premiere_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Premiere</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .6 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/premiere_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Premiere</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/sketch_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Sketch</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .7 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/sketch_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Sketch</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                             </List>
 
                             <List>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/xcode_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Xcode</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .8 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/xcode_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Xcode</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/github_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Github</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: .9 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/github_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Github</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/vs_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">VS Code</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/vs_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">VS Code</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/react_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">React</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.1 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/react_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">React</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/php_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">PHP</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.2 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/php_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">PHP</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/mysql_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Mysql</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.3 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/mysql_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Mysql</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <Image src={`${process.env.PUBLIC_URL + '/img/js_icon.png'}`} alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">JS</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.4 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/js_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">JS</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                             </List>
 
                             <List>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/wp_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Wordpress</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.5 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/wp_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Wordpress</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/jekyll_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Jekyll</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.6 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/jekyll_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Jekyll</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/camera_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Fotografía</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.7 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/camera_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Fotografía</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                                 <ListItem>
-                                    <WhiteImage src={`${process.env.PUBLIC_URL + '/img/pencil_icon.png'}`} className="invert_colour" alt="" />
-                                    <Paragraph size=".8rem" color="#FFF" textAlign="center">Prototipos</Paragraph>
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        transition={{ delay: 1.8 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <WhiteImage src={`${process.env.PUBLIC_URL + '/img/pencil_icon.png'}`} className="invert_colour" alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Prototipos</Paragraph>
+                                    </motion.div>
                                 </ListItem>
                             </List>
                         </Col>
