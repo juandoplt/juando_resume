@@ -333,10 +333,13 @@ const Description = styled.p`
     text-align: left;
 `
 const ListItemLeft = styled.li`
-    width: 40%;
     margin: 2rem 0;
     position: relative;
     text-align:left;
+    width: 100%;
+    @media (min-width: 576px) { 
+      width: 40%;
+   }
 `
 
 
@@ -398,21 +401,21 @@ const ListItemRight = styled(ListItemLeft)`
 `
 
 export {
-    firstBlobber,
-    secondBlobber,
-    thirdBlobber,
-    fourthBlobber,
-    wobbler,
-    pulseRed,
-    SpecialTitle,
-    List,
-    TitleContainer,
-    BigTitle,
-    Description,
-    ListItemLeft,
-    FirstCanvas,
-    SecondCanvas,
-    ThirdCanvas,
-    FourthCanvas,
-    ListItemRight
+  firstBlobber,
+  secondBlobber,
+  thirdBlobber,
+  fourthBlobber,
+  wobbler,
+  pulseRed,
+  SpecialTitle,
+  List,
+  TitleContainer,
+  BigTitle,
+  Description,
+  ListItemLeft,
+  FirstCanvas,
+  SecondCanvas,
+  ThirdCanvas,
+  FourthCanvas,
+  ListItemRight
 };

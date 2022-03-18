@@ -56,8 +56,11 @@ const WhiteImage = styled.img`
 const ListItem = styled.li`
     text-align: center;
     margin: 0.5rem 0;
-    width: 10%;
     min-height: 100px;
+    width: 30%;
+    @media (min-width: 576px) { 
+        width: 10%;
+     }
 `
 
 const Software = () => {

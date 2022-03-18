@@ -28,6 +28,7 @@ const spanStyle = {
     left: "0px",
     top: "0px",
     zIndex: 1,
+    backgroundPosition: "center"
 };
 
 const ImageStyle = {
@@ -72,16 +73,19 @@ const HomeGridItem = ({
     const backgroundMotion = {
         rest: {
             scale: 1,
-            filter: "grayscale(0%)",
+            filter: "grayscale(0%) blur(0)",
             opacity: .5,
-            ease: "easeOut",
-            duration: 0.2,
-            type: "tween"
+            transition: {
+                duration: 0.2,
+                type: "tween",
+                ease: "easeOut"
+            }
+
         },
         hover: {
-            opacity: .4,
-            filter: "grayscale(100%) blur(2px)",
             scale: .95,
+            filter: "grayscale(100%) blur(1px)",
+            opacity: .3,
             transition: {
                 duration: 0.2,
                 type: "tween",

@@ -14,11 +14,12 @@ import * as animationData from '../../assets/animations/brain.json'
 
 const RealRow = styled(Row)`
     align-items: center;
+    overflow:hidden;
 `
 
 const Section = styled.div`
-    padding-top:6rem;
-    padding-bottom:5rem;
+    padding-top:3rem;
+    padding-bottom:4rem;
     background: #e9ecef;
 `
 
@@ -40,7 +41,10 @@ const List = styled.ul`
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 100%;
+    @media (min-width: 576px) { 
+        width: 50%;
+     }
 `
 
 const ListItem = styled.li`
@@ -116,8 +120,8 @@ const Skills = () => {
                             >
                                 <Lottie
                                     options={defaultOptions}
-                                    height={250}
-                                    width={400}
+                                    height="100%"
+                                    width="100%"
                                     style={{
                                         pointerEvents: "none"
                                     }}

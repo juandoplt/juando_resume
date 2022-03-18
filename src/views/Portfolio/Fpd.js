@@ -74,42 +74,19 @@ const FpdPage = () => {
               <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.7} text="Premiere" />
               <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.8} text="After effects" />
               <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.9} text="Mysql" />
-              {/* <ToolsListItem>
-                <motion.div
-                  animate={{ scale: [1,1.2,1] }}
-                  transition={{ duration: .5,delay:2 }}
-                  
-                >
-                  <ToolsListItemLabel>React JS</ToolsListItemLabel>
-                </motion.div>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>React Native</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>Wordpress</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>Html</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>JS</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>Photoshop</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>Premiere</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>After effects</ToolsListItemLabel>
-              </ToolsListItem>
-              <ToolsListItem>
-                <ToolsListItemLabel>Mysql</ToolsListItemLabel>
-              </ToolsListItem> */}
             </ToolsList>
 
 
+          </Col>
+     
+        </Row>
+        <Row>
+            <h1>Otros trabajos</h1>
+          <Col>
+            <h1>Ladder Cup '21</h1>
+          </Col>
+          <Col>
+            <h1>Playgames</h1>
           </Col>
         </Row>
       </Section>
