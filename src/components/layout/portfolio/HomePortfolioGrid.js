@@ -4,7 +4,6 @@ import {
     Col
 } from 'react-bootstrap';
 
-import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { Paragraph, Title } from '../../text';
 import Section from '../../general/Section';

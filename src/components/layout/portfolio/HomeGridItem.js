@@ -6,8 +6,9 @@ import {
 import styled from 'styled-components';
 import { motion } from "framer-motion";
 import './HomePortfolioGrid';
+import { Link } from "react-router-dom";
 
-const Link = styled.a`
+const GoLink = styled(Link)`
         background-image: ${props => props.backgroundImage || ""};
         background-size: cover;
         display: flex;
@@ -88,10 +89,10 @@ const HomeGridItem = ({
     return (
         <Col lg={6}>
             <motion.div initial="rest" whileHover="hover" animate="rest">
-                <Link href={to} marginBottom={marginBottom} >
+                <GoLink to={to} marginBottom={marginBottom} >
                     <motion.span style={{ ...spanStyle, backgroundImage: backgroundImage }} variants={slashMotion} />
                     <motion.img src={logoImage} variants={textMotion} style={ImageStyle} />
-                </Link>
+                </GoLink>
             </motion.div>
         </Col>
     );
