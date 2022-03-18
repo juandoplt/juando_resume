@@ -15,7 +15,7 @@ const GoLink = styled(Link)`
         justify-content: center;
         align-items: center;
         min-height: 390px;
-        margin-bottom: ${props => props.marginBottom + 'rem' || 0};
+        margin-bottom: 1.5rem};
         position:relative;
     `;
 
@@ -89,7 +89,7 @@ const HomeGridItem = ({
     return (
         <Col lg={6}>
             <motion.div initial="rest" whileHover="hover" animate="rest">
-                <GoLink to={to} marginBottom={marginBottom} >
+                <GoLink to={to} >
                     <motion.span style={{ ...spanStyle, backgroundImage: backgroundImage }} variants={slashMotion} />
                     <motion.img src={logoImage} variants={textMotion} style={ImageStyle} />
                 </GoLink>
