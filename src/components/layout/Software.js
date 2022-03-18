@@ -22,7 +22,7 @@ const Section = styled.div`
 
 const FirstTitle = styled(Title)`
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color:#fff;
     &:after{
@@ -33,6 +33,9 @@ const FirstTitle = styled(Title)`
         display: block;
         margin: 1rem auto;
     }
+    @media (min-width: 576px) { 
+        font-size: 2.5rem;
+     }
 `
 
 const List = styled.ul`

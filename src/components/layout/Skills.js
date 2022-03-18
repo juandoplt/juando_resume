@@ -25,7 +25,7 @@ const Section = styled.div`
 
 const FirstTitle = styled(Title)`
     margin-bottom:3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform:uppercase;
     &:after{
         content: '';
@@ -35,6 +35,9 @@ const FirstTitle = styled(Title)`
         display: block;
         margin: 1rem auto;
     }
+    @media (min-width: 576px) { 
+        font-size: 2.5rem;
+     }
 `
 
 const List = styled.ul`
@@ -84,7 +87,16 @@ const Image = styled.img`
     margin:0 0 0 auto;
     display:block;
 `
-
+const LottieContainer = styled.div`
+    max-height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 576px) { 
+        height:100%;
+        max-height: 380px;
+     }
+`
 
 const Skills = () => {
     const defaultOptions = {
@@ -112,7 +124,7 @@ const Skills = () => {
                             <FirstTitle color="#000" textAlign="center" fontWeight="bold">Habilidades</FirstTitle>
                         </motion.div>
                         <Col lg={5}>
-                            <motion.div
+                            <LottieContainer
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: .2 }}
@@ -126,12 +138,12 @@ const Skills = () => {
                                         pointerEvents: "none"
                                     }}
                                 />
-                            </motion.div>
+                            </LottieContainer>
                         </Col>
                         <Col lg={7}>
                             <motion.div
-                                initial={{ opacity: 0,y:-10 }}
-                                whileInView={{ opacity: 1,y:0 }}
+                                initial={{ opacity: 0, y: -10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: .3 }}
                                 viewport={{ once: true }}
                             >

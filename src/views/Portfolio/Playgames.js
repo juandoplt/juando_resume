@@ -1,9 +1,12 @@
+import { useEffect } from "react";
+import {useLocation} from 'react-router-dom';
 import { Paragraph, Title } from "../../components/text";
 import Animation from "../../utils/animation";
 import styled from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
 import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
 import Section from '../../components/general/Section';
+
 
 const ToolsList = styled.ul`
   list-style-type: none;
@@ -25,14 +28,19 @@ const ElementsList = styled.ul`
 
 
 const PlaygamesPage = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   const transition = {
     delay: 0.2
   }
 
   return (
     <Animation transition={.45}>
-      <Section paddingTop="5%">
+      <Section paddingTop="15%">
         <Container>
           <Row>
             <Col>

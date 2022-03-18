@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import {useLocation} from 'react-router-dom';
 import { Paragraph, Title } from "../../components/text";
 import Animation from "../../utils/animation";
 import styled from 'styled-components'
@@ -29,7 +31,12 @@ const ElementsList = styled.ul`
 
 
 const LadderCupPage = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   const transition = {
     delay: 0.2
   }

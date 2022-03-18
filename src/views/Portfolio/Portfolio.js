@@ -1,5 +1,5 @@
-import * as React from "react";
-
+import { useEffect } from "react";
+import {useLocation} from 'react-router-dom';
 import { Paragraph } from "../../components/text";
 import Animation from "../../utils/animation";
 import { motion } from "framer-motion"
@@ -61,6 +61,12 @@ const Thumbnail = ({ id, project, thumb, i }) => (
 
 
 const Portfolio = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
   return (
     <Animation transition={.45}>
       <Section paddingBottom="5%" paddingTop="7%">
