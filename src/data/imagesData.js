@@ -19,5 +19,20 @@ export const images = [
     project: "mastenis",
     thumb: "thumb",
   },
+  {
+    id: "48847a7b-e9f7-4c4a-a0as1a-24d3f4609b23",
+    project: "ligaepica",
+    thumb: "thumb",
+  },
+  {
+    id: "48847a7b-e9f7-4c4a-a0as1a-24d3f4609b23",
+    project: "arrimate",
+    thumb: "thumb",
+  },
+  {
+    id: "48847a7b-e9f7-4c4a-a0as1a-24d3f4609b23",
+    project: "logos",
+    thumb: "thumb",
+  },
 
 ];

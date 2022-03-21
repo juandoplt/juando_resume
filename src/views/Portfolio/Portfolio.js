@@ -5,6 +5,7 @@ import Animation from "../../utils/animation";
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
 import { images } from "../../data/imagesData";
+import { Plock } from "react-plock";
 
 import styled, { css } from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
@@ -39,9 +40,8 @@ const MotionDiv = styled(motion.div)`
 
 
 const Thumbnail = ({ id, project, thumb, i }) => (
-  <motion.div className="thumbnail" variants={thumbnailVariants}>
+  <motion.div variants={thumbnailVariants}>
     <motion.div
-      className="frame"
       whileHover="hover"
       variants={frameVariants}
       transition={transition}
@@ -53,6 +53,7 @@ const Thumbnail = ({ id, project, thumb, i }) => (
           alt="The Barbican"
           variants={imageVariants}
           transition={transition}
+          style={{width:"100%"}}
         />
       </Link>
     </motion.div>
@@ -63,18 +64,34 @@ const Thumbnail = ({ id, project, thumb, i }) => (
 const Portfolio = () => {
   const { pathname } = useLocation();
 
+  const breakpoints = [
+    { size: 640, columns: 1 },
+    { size: 768, columns: 2 },
+    { size: 1024, columns: 3 },
+  ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
     <Animation transition={.45}>
-      <Section paddingBottom="5%" paddingTop="7%">
+      <Section paddingBottom="5%" paddingTop="70px">
         <Container>
           <Row>
-            <Col style={{display:"flex"}}>
-              <div style={{ width: "30%", height: "350px",margin:"1rem", backgroundColor: "blue" }}></div>
-              <div style={{ width: "35%", height: "420px",margin:"1rem", backgroundColor: "red" }}></div>
+            {/* <Col style={{display:"flex"}}> */}
+            <Col>
+
+              <Plock gap={15} nColumns={breakpoints}>
+                {images.map((item, i) => {
+                  return (<div key={item['id']} id={item['id']} ><Thumbnail i={i} project={item["project"]} thumb={item["thumb"]} /></div>)
+                })}
+              </Plock>
+
+
+
+              {/* <div style={{ width: "30%", height: "350px",margin:"1rem", backgroundColor: "blue" }}></div> */}
+              {/* <div style={{ width: "35n%", height: "420px",margin:"1rem", backgroundColor: "red" }}></div> */}
             </Col>
           </Row>
         </Container>
