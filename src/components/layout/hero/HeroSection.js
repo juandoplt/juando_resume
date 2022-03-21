@@ -6,11 +6,9 @@ import {
 
 import { Title, Paragraph } from '../../text/';
 import Section from '../../general/Section';
-import Separator from '../../general/Separator';
 import { motion } from "framer-motion"
 import styled from 'styled-components';
-import Lottie from 'react-lottie';
-import * as animationData from '../../../assets/animations/salute.json'
+import Player from './Player';
 
 const Span = styled(motion.span)`
     display:inline-block
@@ -44,28 +42,13 @@ const FirstColumn = styled.div`
 `
 
 const HeroSection = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    controls: false,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
-
   return (
     <SpecialSection>
       <Container>
         <Row>
           <Column>
             <FirstColumn>
-              <Lottie
-                options={defaultOptions}
-                style={{
-                  pointerEvents: "none"
-                }}
-              />
+              <Player />
             </FirstColumn>
             <div>
               <Title size="3rem" fontWeight="bold">
@@ -79,7 +62,7 @@ const HeroSection = () => {
           </Column>
         </Row>
       </Container>
-    </SpecialSection>
+    </SpecialSection >
   );
 }
 
