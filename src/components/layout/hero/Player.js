@@ -81,10 +81,10 @@ const Player = ({ mortyDance }) => {
   };
 
   const songList = [
+    require(`../../../assets/sounds/xfiles.mp3`), //local song
     require(`../../../assets/sounds/beeges.mp3`), //local song
     require(`../../../assets/sounds/daftpunk.mp3`), //local song
-    require(`../../../assets/sounds/sogo.mp3`), //local song
-    require(`../../../assets/sounds/song.mp3`), //local song
+    require(`../../../assets/sounds/erotic.mp3`), //local song
   ]
 
   const turnLights = () => {
