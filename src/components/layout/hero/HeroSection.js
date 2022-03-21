@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import {
   Row,
   Container,
@@ -35,20 +37,52 @@ const SpecialSection = styled(Section)`
 `
 
 const FirstColumn = styled.div`
-    width:50%;
+    // width:50%;
     @media (min-width: 576px) { 
-      width:50%;
+      // width:50%;
+  }
+`
+
+const ActivatePlayer = styled.button`
+  text-align:center;
+  text-decoration:none;
+  display:block;
+  border-radius:5px;
+  border:1px solid #000;
+  background:none;
+  width:210px;
+  padding:.5rem 0;
+  color:#000;
+  margin:1rem auto;
+  position:relative;
+  z-index:2;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  &:hover{
+    cursor:pointer;
+    background:#000;
+    color:#fff;
   }
 `
 
 const HeroSection = () => {
+  const [mortyDance, setMortyDance] = useState(false);
+
+  const turnDanceMode = () => {
+    setMortyDance(!mortyDance)
+  }
+
   return (
     <SpecialSection>
       <Container>
         <Row>
           <Column>
             <FirstColumn>
-              <Player />
+              <Player mortyDance={mortyDance}/>
+              <ActivatePlayer onClick={() => turnDanceMode()}>Darle ritmo a Morty</ActivatePlayer>
             </FirstColumn>
             <div>
               <Title size="3rem" fontWeight="bold">

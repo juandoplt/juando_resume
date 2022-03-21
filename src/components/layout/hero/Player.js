@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 import Lottie from 'react-lottie';
 import * as animationData from '../../../assets/animations/salute.json';
 import {
@@ -44,8 +44,9 @@ const MetaDataContainer = styled.div`
 
 
 
-const Player = props => {
+const Player = ({ mortyDance }) => {
   const [lights, setLights] = useState(false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   const defaultOptions = {
     loop: true,
@@ -60,7 +61,6 @@ const Player = props => {
   const songList = [
     require(`../../../assets/sounds/beeges.mp3`), //local song
     require(`../../../assets/sounds/daftpunk.mp3`), //local song
-    require(`../../../assets/sounds/other.mp3`), //local song
     require(`../../../assets/sounds/sogo.mp3`), //local song
     require(`../../../assets/sounds/song.mp3`), //local song
   ]
@@ -69,6 +69,27 @@ const Player = props => {
     setLights(!lights)
   }
 
+  const sidebar = {
+    open: () => ({
+      height: "130px",
+      opacity:1,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        restDelta: 2
+      }
+    }),
+    closed: {
+      opacity:0,
+      height: "0px",
+      transition: {
+        delay: 0.1,
+        type: "spring",
+        stiffness: 500,
+        damping: 40
+      }
+    }
+  };
 
   return (
     <>
@@ -117,37 +138,49 @@ const Player = props => {
           </motion.div>
         </>
       }
+
       <Lottie
         options={defaultOptions}
         style={{
           pointerEvents: "none",
         }}
       />
-      <Reaplay tracks={songList} startIndex={0}>
-        {(player) => {
-          return (
-            <PlayerContainer>
-              <PlaylistContainer>
-                <DiscoIcon onClick={() => turnLights()} image="disco" lights={lights}/>
-                <Icon onClick={() => player.setTrackIndex(0)} image="xfiles" id={0} playing={player.trackIndex}/>
-                <Icon onClick={() => player.setTrackIndex(1)} image="beegees" id={1} playing={player.trackIndex}/>
-                <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk" id={2} playing={player.trackIndex}/>
-                <Icon onClick={() => player.setTrackIndex(3)} image="maddonna" id={3} playing={player.trackIndex}/>
-                {player.isPlaying ? (
-                  <PauseIcon onClick={() => player.setIsPlaying(false)} />
-                ) : (
-                  <PlayIcon onClick={() => player.setIsPlaying(true)} />
-                )}
-              </PlaylistContainer>
-              <MetaDataContainer>
-                <p>{metaData[player.trackIndex].name}</p>
-                <p>{metaData[player.trackIndex].artist}</p>
-              </MetaDataContainer>
-            </PlayerContainer>
-          );
-        }
-        }
-      </Reaplay>
+
+
+      <motion.div
+            initial={false}
+            animate={mortyDance ? "open" : "closed"}
+            variants={sidebar}
+            style={{marginTop:10,paddingTop:10}}
+      >
+        <Reaplay tracks={songList} startIndex={0}>
+          {(player) => {
+            return (
+              <PlayerContainer>
+                <PlaylistContainer>
+                  <DiscoIcon onClick={() => turnLights()} image="disco" lights={lights} />
+                  <Icon onClick={() => player.setTrackIndex(0)} image="xfiles" id={0} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(1)} image="beegees" id={1} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk" id={2} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(3)} image="maddonna" id={3} playing={player.trackIndex} />
+                  {player.isPlaying ? (
+                    <PauseIcon onClick={() => player.setIsPlaying(false)} />
+                  ) : (
+                    <PlayIcon onClick={() => player.setIsPlaying(true)} />
+                  )}
+                </PlaylistContainer>
+                <MetaDataContainer>
+                  <p>{metaData[player.trackIndex].name}</p>
+                  <p>{metaData[player.trackIndex].artist}</p>
+                </MetaDataContainer>
+              </PlayerContainer>
+            );
+          }
+          }
+        </Reaplay>
+      </motion.div>
+
+      
     </>
   )
 };
