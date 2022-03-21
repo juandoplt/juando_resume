@@ -46,7 +46,8 @@ export const PauseIcon = ({ onClick }) => (
   </motion.div>
 );
 
-export const Icon = ({ onClick, image, id, playing }) => {
+export const Icon = ({ onClick, image, id, playing,stopped }) => {
+  console.log("stopped", stopped)
   const variants = {
     active: {
       rotate: 360,
@@ -68,7 +69,7 @@ export const Icon = ({ onClick, image, id, playing }) => {
       whileHover={{ scale: 1.2, rotate: 5 }}
     >
       <motion.div
-        variants={variants} animate={id == playing ? "active" : "inactive"}
+        variants={variants} animate={id == playing && stopped ? "active" : "inactive"}
       >
         <Link onClick={onClick}>
           <Image src={require(`../../../assets/images/${image}.png`)} />

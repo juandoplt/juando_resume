@@ -13,13 +13,13 @@ import {
 import { Reaplay } from "reaplay";
 import styled from 'styled-components';
 
-const PlayerContainer = styled.div`
+const PlayerContent = styled.div`
     display:flex;
     flex-wrap:wrap;
     overflow:visible;
     `
 
-const PlaylistContainer = styled.div`
+const Playlist = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -38,6 +38,28 @@ const MetaDataContainer = styled.div`
     }
     p:first-child{
       font-weight:900;
+    }
+`
+
+const Lights = styled.div`
+
+`
+
+const Morty = styled.div`
+    max-width:60%;
+    margin:0 auto;
+    flex-direction:column
+    @media (min-width: 576px) { 
+    }
+`
+
+const PlayerContainer = styled(motion.div)`
+    margin:0 auto;
+    width:350px;
+    margin-top: 10px; 
+    padding-top: 10px;
+    @media (min-width: 576px) { 
+      width:400px;
     }
 `
 
@@ -72,7 +94,7 @@ const Player = ({ mortyDance }) => {
   const sidebar = {
     open: () => ({
       height: "130px",
-      opacity:1,
+      opacity: 1,
       transition: {
         type: "spring",
         stiffness: 400,
@@ -80,7 +102,7 @@ const Player = ({ mortyDance }) => {
       }
     }),
     closed: {
-      opacity:0,
+      opacity: 0,
       height: "0px",
       transition: {
         delay: 0.1,
@@ -138,49 +160,48 @@ const Player = ({ mortyDance }) => {
           </motion.div>
         </>
       }
+      <Morty>
+        <Lottie
+          options={defaultOptions}
+          style={{
+            pointerEvents: "none",
+          }}
+        />
+      </Morty>
 
-      <Lottie
-        options={defaultOptions}
-        style={{
-          pointerEvents: "none",
-        }}
-      />
-
-
-      <motion.div
-            initial={false}
-            animate={mortyDance ? "open" : "closed"}
-            variants={sidebar}
-            style={{marginTop:10,paddingTop:10}}
+      <PlayerContainer
+        initial={false}
+        animate={mortyDance ? "open" : "closed"}
+        variants={sidebar}
       >
         <Reaplay tracks={songList} startIndex={0}>
           {(player) => {
             return (
-              <PlayerContainer>
-                <PlaylistContainer>
+              <PlayerContent>
+                <Playlist>
                   <DiscoIcon onClick={() => turnLights()} image="disco" lights={lights} />
-                  <Icon onClick={() => player.setTrackIndex(0)} image="xfiles" id={0} playing={player.trackIndex} />
-                  <Icon onClick={() => player.setTrackIndex(1)} image="beegees" id={1} playing={player.trackIndex} />
-                  <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk" id={2} playing={player.trackIndex} />
-                  <Icon onClick={() => player.setTrackIndex(3)} image="maddonna" id={3} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(0)} image="xfiles" id={0} stopped={player.isPlaying} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(1)} image="beegees"  id={1} stopped={player.isPlaying} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk"  id={2} stopped={player.isPlaying} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(3)} image="maddonna"  id={3} stopped={player.isPlaying} playing={player.trackIndex} />
                   {player.isPlaying ? (
                     <PauseIcon onClick={() => player.setIsPlaying(false)} />
                   ) : (
                     <PlayIcon onClick={() => player.setIsPlaying(true)} />
                   )}
-                </PlaylistContainer>
+                </Playlist>
                 <MetaDataContainer>
                   <p>{metaData[player.trackIndex].name}</p>
                   <p>{metaData[player.trackIndex].artist}</p>
                 </MetaDataContainer>
-              </PlayerContainer>
+              </PlayerContent>
             );
           }
           }
         </Reaplay>
-      </motion.div>
+      </PlayerContainer>
 
-      
+
     </>
   )
 };
