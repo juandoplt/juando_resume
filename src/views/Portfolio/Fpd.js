@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import {useLocation} from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { Paragraph, Title } from "../../components/text";
 import Animation from "../../utils/animation";
 import styled from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
 import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
+import { motion } from "framer-motion";
 
 const Section = styled(Container)`
     padding-top:5rem;
@@ -85,15 +86,22 @@ const FpdPage = () => {
 
 
           </Col>
-     
+
         </Row>
-        <Row>
-            <h1>Otros trabajos</h1>
-          <Col>
-            <h1>Ladder Cup '21</h1>
+        <Row style={{ padding: "3rem 0" }}>
+          <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>Otros trabajos</h1>
+          <Col style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+            <Link to={"/laddercup"}>
+              <motion.img src={require("../../assets/images/fpd/project_2_screen.jpg")} whileHover={{ scale: 1.2, transition: { duration: .3 }, }} style={{}} />
+              <h1 style={{ textAlign: "center", fontSize: "1.3rem", textTransform: "uppercase", fontWeight: "600" }}>Ladder Cup '21</h1>
+            </Link>
+
           </Col>
-          <Col>
-            <h1>Playgames</h1>
+          <Col style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+            <Link to={"/fpd"}>
+              <motion.img src={require("../../assets/images/fpd/project_2_screen.jpg")} whileHover={{ scale: 1.2, transition: { duration: .3 }, }} style={{}} />
+              <h1 style={{ textAlign: "center", fontSize: "1.3rem", textTransform: "uppercase", fontWeight: "600" }}>Playgames</h1>
+            </Link>
           </Col>
         </Row>
       </Section>
