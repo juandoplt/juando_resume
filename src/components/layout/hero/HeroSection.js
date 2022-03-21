@@ -72,6 +72,7 @@ const ActivatePlayer = styled.button`
 const SpecialRow = styled(Row)`
   align-items:center;
   flex-direction:column;
+  overflow:hidden;
   @media (min-width: 576px) { 
     order:2;
     flex-direction:row;

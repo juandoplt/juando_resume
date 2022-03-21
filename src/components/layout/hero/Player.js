@@ -41,8 +41,34 @@ const MetaDataContainer = styled.div`
     }
 `
 
-const Lights = styled.div`
+const LeftLight = styled.div`
+    clip-path: polygon(90% 0, 100% 1%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom,  rgba(177,48,242,1) 0%,rgba(183,123,229,0) 100%);
+    height: 27em;
+    width: 16em;
+    z-index: 3;
+    top: -180px;
+    left: -10px;
+    position: absolute;
+    animation: flash linear 1s infinite;
+    animation-play-state: "paused;
+    transform: rotate(195deg);
+    @media (min-width: 576px) { 
+      transform: rotate(-25deg);
+      left: -50px;
+    }
+`
 
+const RightLight = styled(LeftLight)`
+    left: auto;
+    right: -70px;
+    clip-path: polygon(33% 1%, 49% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom,  rgba(50,153,255,1) 0%,rgba(134,130,242,0) 100%);
+    transform: rotate(158deg);
+    @media (min-width: 576px) { 
+      transform: rotate(25deg);
+      right: -50px;
+    }
 `
 
 const Morty = styled.div`
@@ -62,7 +88,10 @@ const PlayerContainer = styled(motion.div)`
       width:400px;
     }
 `
-
+const AnimatedLight = styled(motion.div)`
+    z-index: 2;
+    position: relative;
+`
 
 
 
@@ -118,46 +147,18 @@ const Player = ({ mortyDance }) => {
 
       {lights &&
         <>
-          <motion.div
+          <AnimatedLight
             animate={{ opacity: [0, 1, 0] }}
             transition={{ repeat: Infinity, duration: .5, delay: .2 }}
-            style={{ zIndex: 2, position: "relative" }}
           >
-            <div style={{
-              height: "27em",
-              width: "16em",
-              zIndex: 3,
-              top: -200,
-              left: -50,
-              position: "absolute",
-              clipPath: "polygon(90% 0, 100% 1%, 100% 100%, 0% 100%)",
-              background: "linear-gradient(to bottom,  rgba(177,48,242,1) 0%,rgba(183,123,229,0) 100%)",
-
-
-              animation: "flash linear 1s infinite",
-              animationPlayState: "paused",
-              transform: "rotate(-25deg)"
-            }}></div>
-          </motion.div>
-          <motion.div
+            <LeftLight />
+          </AnimatedLight>
+          <AnimatedLight
             animate={{ opacity: [0, 1, 0] }}
             transition={{ repeat: Infinity, duration: .5 }}
-            style={{ zIndex: 2, position: "relative" }}
           >
-            <div style={{
-              height: "27em",
-              width: "16em",
-              zIndex: 3,
-              top: -200,
-              right: -50,
-              position: "absolute",
-              clipPath: "polygon(33% 1%, 49% 0, 100% 100%, 0% 100%)",
-              background: "linear-gradient(to bottom,  rgba(50,153,255,1) 0%,rgba(134,130,242,0) 100%)",
-              animation: "flash linear 1s infinite",
-              animationPlayState: "paused",
-              transform: "rotate(25deg)"
-            }}></div>
-          </motion.div>
+            <RightLight />
+          </AnimatedLight>
         </>
       }
       <Morty>
@@ -181,9 +182,9 @@ const Player = ({ mortyDance }) => {
                 <Playlist>
                   <DiscoIcon onClick={() => turnLights()} image="disco" lights={lights} />
                   <Icon onClick={() => player.setTrackIndex(0)} image="xfiles" id={0} stopped={player.isPlaying} playing={player.trackIndex} />
-                  <Icon onClick={() => player.setTrackIndex(1)} image="beegees"  id={1} stopped={player.isPlaying} playing={player.trackIndex} />
-                  <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk"  id={2} stopped={player.isPlaying} playing={player.trackIndex} />
-                  <Icon onClick={() => player.setTrackIndex(3)} image="maddonna"  id={3} stopped={player.isPlaying} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(1)} image="beegees" id={1} stopped={player.isPlaying} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk" id={2} stopped={player.isPlaying} playing={player.trackIndex} />
+                  <Icon onClick={() => player.setTrackIndex(3)} image="maddonna" id={3} stopped={player.isPlaying} playing={player.trackIndex} />
                   {player.isPlaying ? (
                     <PauseIcon onClick={() => player.setIsPlaying(false)} />
                   ) : (
