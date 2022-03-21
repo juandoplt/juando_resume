@@ -47,7 +47,6 @@ export const PauseIcon = ({ onClick }) => (
 );
 
 export const Icon = ({ onClick, image, id, playing,stopped }) => {
-  console.log("stopped", stopped)
   const variants = {
     active: {
       rotate: 360,
@@ -80,7 +79,6 @@ export const Icon = ({ onClick, image, id, playing,stopped }) => {
 }
 
 export const DiscoIcon = ({ onClick, image, lights }) => {
-  console.log(lights)
   const variants = {
     active: {
       scale: [1.2,1,1.2],

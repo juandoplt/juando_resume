@@ -51,7 +51,7 @@ const LeftLight = styled.div`
     left: -10px;
     position: absolute;
     animation: flash linear 1s infinite;
-    animation-play-state: "paused;
+    animation-play-state: paused;
     transform: rotate(195deg);
     @media (min-width: 576px) { 
       transform: rotate(-25deg);

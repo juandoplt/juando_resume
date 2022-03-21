@@ -76,6 +76,7 @@ const SpecialRow = styled(Row)`
   @media (min-width: 576px) { 
     order:2;
     flex-direction:row;
+    overflow:visible;
   }
 `
 
