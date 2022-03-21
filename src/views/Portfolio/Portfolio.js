@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Paragraph } from "../../components/text";
 import Animation from "../../utils/animation";
 import { motion } from "framer-motion"
@@ -66,13 +66,19 @@ const Portfolio = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
   return (
     <Animation transition={.45}>
       <Section paddingBottom="5%" paddingTop="7%">
         <Container>
           <Row>
-            <Col>
+            <Col style={{display:"flex"}}>
+              <div style={{ width: "30%", height: "350px",margin:"1rem", backgroundColor: "blue" }}></div>
+              <div style={{ width: "35%", height: "420px",margin:"1rem", backgroundColor: "red" }}></div>
+            </Col>
+          </Row>
+        </Container>
+        {/* <Col>
               <MotionDiv
                 className="thumbnails"
                 initial="initial"
@@ -84,9 +90,7 @@ const Portfolio = () => {
                   return (<Thumbnail key={item['id']} id={item['id']} i={i} project={item["project"]} thumb={item["thumb"]} />)
                 })}
               </MotionDiv>
-            </Col>
-          </Row>
-        </Container>
+            </Col> */}
       </Section>
     </Animation>
   );
