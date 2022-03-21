@@ -5,15 +5,12 @@ import * as animationData from '../../../assets/animations/salute.json';
 import {
   PlayIcon,
   PauseIcon,
-  BeeGeesIcon,
-  CircleIcon,
-  DaftPunkIcon,
-  MaddonnaIcon,
-  XfilesIcon,
+  Icon,
+  DiscoIcon,
+
 } from '../../layout/hero/PlayerIcons';
 
 import { Reaplay } from "reaplay";
-// import AudioPlayer from './AudioPlayer';
 import styled from 'styled-components';
 
 const PlayerContainer = styled.div`
@@ -21,8 +18,8 @@ const PlayerContainer = styled.div`
     flex-wrap:wrap;
     overflow:visible;
     `
-    
-    const PlaylistContainer = styled.div`
+
+const PlaylistContainer = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -64,11 +61,14 @@ const Player = props => {
     require(`../../../assets/sounds/beeges.mp3`), //local song
     require(`../../../assets/sounds/daftpunk.mp3`), //local song
     require(`../../../assets/sounds/other.mp3`), //local song
+    require(`../../../assets/sounds/sogo.mp3`), //local song
+    require(`../../../assets/sounds/song.mp3`), //local song
   ]
 
   const turnLights = () => {
     setLights(!lights)
   }
+
 
   return (
     <>
@@ -123,18 +123,16 @@ const Player = props => {
           pointerEvents: "none",
         }}
       />
-      <Reaplay tracks={songList} startIndex={1}>
+      <Reaplay tracks={songList} startIndex={0}>
         {(player) => {
-          console.log("player loading :", player.isLoading);
-
           return (
             <PlayerContainer>
               <PlaylistContainer>
-                <CircleIcon onClick={() => turnLights()} fill="red" />
-                <BeeGeesIcon onClick={() => player.setTrackIndex(0)} />
-                <DaftPunkIcon onClick={() => player.setTrackIndex(1)} />
-                <MaddonnaIcon onClick={() => player.setTrackIndex(1)} />
-                <XfilesIcon onClick={() => player.setTrackIndex(1)} />
+                <DiscoIcon onClick={() => turnLights()} image="disco" lights={lights}/>
+                <Icon onClick={() => player.setTrackIndex(0)} image="xfiles" id={0} playing={player.trackIndex}/>
+                <Icon onClick={() => player.setTrackIndex(1)} image="beegees" id={1} playing={player.trackIndex}/>
+                <Icon onClick={() => player.setTrackIndex(2)} image="daftpunk" id={2} playing={player.trackIndex}/>
+                <Icon onClick={() => player.setTrackIndex(3)} image="maddonna" id={3} playing={player.trackIndex}/>
                 {player.isPlaying ? (
                   <PauseIcon onClick={() => player.setIsPlaying(false)} />
                 ) : (
@@ -155,25 +153,21 @@ const Player = props => {
 };
 const metaData = [
   {
-    name: "Song 1",
-    artist: "SoundHelix 1"
+    name: "Soundtrack",
+    artist: "X Files"
+  },
+  {
+    name: "You should be dancing",
+    artist: "Beegees"
   },
   {
     name: "Around the world",
     artist: "Daft Punk"
   },
   {
-    name: "Song 3",
-    artist: "SoundHelix 3"
+    name: "Erotic",
+    artist: "Maddonna"
   },
-  {
-    name: "Song 4",
-    artist: "SoundHelix 4"
-  },
-  {
-    name: "Song 5",
-    artist: "SoundHelix 5"
-  }
 ];
 
 export default Player;
