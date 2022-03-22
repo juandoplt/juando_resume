@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
 import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
 import { motion } from "framer-motion";
+import RelatedWorks from "../../components/general/RelatedWorks";
 
 const Section = styled(Container)`
     padding-top:5rem;
@@ -88,22 +89,7 @@ const FpdPage = () => {
           </Col>
 
         </Row>
-        <Row style={{ padding: "3rem 0" }}>
-          <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>Otros trabajos</h1>
-          <Col style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
-            <Link to={"/laddercup"}>
-              <motion.img src={require("../../assets/images/fpd/project_2_screen.jpg")} whileHover={{ scale: 1.2, transition: { duration: .3 }, }} style={{}} />
-              <h1 style={{ textAlign: "center", fontSize: "1.3rem", textTransform: "uppercase", fontWeight: "600" }}>Ladder Cup '21</h1>
-            </Link>
-
-          </Col>
-          <Col style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
-            <Link to={"/fpd"}>
-              <motion.img src={require("../../assets/images/fpd/project_2_screen.jpg")} whileHover={{ scale: 1.2, transition: { duration: .3 }, }} style={{}} />
-              <h1 style={{ textAlign: "center", fontSize: "1.3rem", textTransform: "uppercase", fontWeight: "600" }}>Playgames</h1>
-            </Link>
-          </Col>
-        </Row>
+        <RelatedWorks left="mastenis" right="laddercup"/>
       </Section>
     </Animation>
   );
