@@ -6,6 +6,7 @@ import SecondarySkills from "../components/layout/SecondarySkills";
 import Skills from "../components/layout/Skills";
 import ContactMe from "../components/layout/ContactMe";
 import Software from "../components/layout/Software";
+import Footer from "../components/general/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <SecondarySkills />
       <Software />
       <ContactMe />
+      <Footer />
     </Animation>
   );
 }

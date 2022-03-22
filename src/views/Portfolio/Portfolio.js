@@ -10,6 +10,7 @@ import { Plock } from "react-plock";
 import styled, { css } from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
 import Section from '../../components/general/Section';
+import Footer from "../../components/general/Footer";
 
 const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -112,36 +113,17 @@ const Portfolio = () => {
       <Section paddingBottom="5%" paddingTop="90px">
         <Container>
           <Row>
-            {/* <Col style={{display:"flex"}}> */}
             <Col>
-
               <Plock gap={15} nColumns={breakpoints}>
                 {images.map((item, i) => {
                   return (<div key={item['id']} id={item['id']} ><Thumbnail i={i} project={item["project"]} thumb={item["thumb"]} title={item["title"]} /></div>)
                 })}
               </Plock>
-
-
-
-              {/* <div style={{ width: "30%", height: "350px",margin:"1rem", backgroundColor: "blue" }}></div> */}
-              {/* <div style={{ width: "35n%", height: "420px",margin:"1rem", backgroundColor: "red" }}></div> */}
             </Col>
           </Row>
         </Container>
-        {/* <Col>
-              <MotionDiv
-                className="thumbnails"
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-              >
-                {images.map((item, i) => {
-                  return (<Thumbnail key={item['id']} id={item['id']} i={i} project={item["project"]} thumb={item["thumb"]} />)
-                })}
-              </MotionDiv>
-            </Col> */}
       </Section>
+      <Footer />
     </Animation>
   );
 }
