@@ -5,10 +5,12 @@ import Animation from "../../utils/animation";
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
 import { images } from "../../data/imagesData";
+import { Plock } from "react-plock";
 
 import styled, { css } from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
 import Section from '../../components/general/Section';
+import Footer from "../../components/general/Footer";
 
 const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -27,32 +29,65 @@ const frameVariants = {
 };
 
 const imageVariants = {
-  hover: { scale: 1.1 }
+  hover: {
+    scale: 1.1,
+    filter: "grayscale(70%) blur(1px)",
+  }
 };
+
+const textVariants = {
+  hover: {
+    y: -20,
+    opacity: 1,
+  }
+};
+
+const backgroundVariants = {
+  hover: {
+    opacity: 1,
+    background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)",
+    scale: 1.1
+
+  }
+}
 
 const MotionDiv = styled(motion.div)`
   display: flex;
   justify-content: space-between;
 `
+const MotionTitle = styled(motion.h1)`
+  opacity:0;
+  position:absolute;
+  z-index:3;
+  margin:0;
+  bottom:-10px;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:1.4rem;
+`
 
 
 
-
-const Thumbnail = ({ id, project, thumb, i }) => (
-  <motion.div className="thumbnail" variants={thumbnailVariants}>
+const Thumbnail = ({ id, project, thumb, title, i }) => (
+  <motion.div variants={thumbnailVariants}>
     <motion.div
-      className="frame"
       whileHover="hover"
       variants={frameVariants}
       transition={transition}
     >
-      <Link to={`/${project}`}>
+      <Link to={`/${project}`} style={{ position: "relative", display: "block", position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <motion.div variants={backgroundVariants} transition={transition} style={{ opacity: 0, backgroundColor: "transparent", position: "absolute", bottom: 0, left: 0, width: "100%", height: "100%", zIndex: 3 }}></motion.div>
+        <MotionTitle
+          variants={textVariants}
+          transition={transition}
+        >{title}</MotionTitle>
         <motion.img
           //src={`/img/portfolio/${project}/${thumb}.jpg`}
           src={`${process.env.PUBLIC_URL + '/img/portfolio/' + project + '/' + thumb + '.jpg'}`}
           alt="The Barbican"
           variants={imageVariants}
           transition={transition}
+          style={{ width: "100%" }}
         />
       </Link>
     </motion.div>
@@ -63,35 +98,32 @@ const Thumbnail = ({ id, project, thumb, i }) => (
 const Portfolio = () => {
   const { pathname } = useLocation();
 
+  const breakpoints = [
+    { size: 640, columns: 1 },
+    { size: 768, columns: 2 },
+    { size: 1024, columns: 3 },
+  ];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
     <Animation transition={.45}>
-      <Section paddingBottom="5%" paddingTop="7%">
+      <Section paddingBottom="5%" paddingTop="90px">
         <Container>
           <Row>
-            <Col style={{display:"flex"}}>
-              <div style={{ width: "30%", height: "350px",margin:"1rem", backgroundColor: "blue" }}></div>
-              <div style={{ width: "35%", height: "420px",margin:"1rem", backgroundColor: "red" }}></div>
+            <Col>
+              <Plock gap={15} nColumns={breakpoints}>
+                {images.map((item, i) => {
+                  return (<div key={item['id']} id={item['id']} ><Thumbnail i={i} project={item["project"]} thumb={item["thumb"]} title={item["title"]} /></div>)
+                })}
+              </Plock>
             </Col>
           </Row>
         </Container>
-        {/* <Col>
-              <MotionDiv
-                className="thumbnails"
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-              >
-                {images.map((item, i) => {
-                  return (<Thumbnail key={item['id']} id={item['id']} i={i} project={item["project"]} thumb={item["thumb"]} />)
-                })}
-              </MotionDiv>
-            </Col> */}
       </Section>
+      <Footer />
     </Animation>
   );
 }

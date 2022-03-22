@@ -1,9 +1,3 @@
-import {
-    Nav,
-    Navbar,
-    Container,
-    NavDropdown,
-} from 'react-bootstrap';
 import { motion } from "framer-motion"
 import styled from 'styled-components'
 
@@ -14,9 +8,7 @@ const ToolsListItem = styled.li`
 const ToolsListItemLabel = styled.span`
   font-size: .8rem;
   display: block;
-  background: #000;
   color: #fff;
-  border-radius: 10px;
   padding: 0.1rem 0.8rem;
 `
 
@@ -29,8 +21,14 @@ const AnimatedListItem = ({
     return (
         <ToolsListItem>
             <motion.div
-                animate={{ scale }}
-                transition={{ duration, delay }}
+                whileInView={{
+                    opacity: 1,
+                    scale: [0, 1.2, 1],
+                    background: ["rgb(103,58,183)", "rgb(0,0,0)"],
+                }}
+                transition={{ duration: .5, delay }}
+                style={{ opacity: 0, borderRadius: "10px" }}
+                viewport={{ once: true }}
             >
                 <ToolsListItemLabel>{text}</ToolsListItemLabel>
             </motion.div>

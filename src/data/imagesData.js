@@ -1,22 +1,60 @@
 export const images = [
   {
-    id: "c61c2333-b5d4-4226-b505-c0843daf59e8",
+    id: "2elUtJZAt5fFbZZp",
     project: "fpd",
+    title: "FPD",
     thumb: "thumb",
+    mockups: [
+      "phone_01.png",
+      "phone_02.png",
+      "phone_03.png",
+      "phone_04.png",
+      "phone_05.png",
+      "phone_06.png",
+      "phone_07.png",
+      "phone_08.png"
+    ]
   },
   {
-    id: "64dc8084-d779-4774-bd50-d1da1ed74f67",
+    id: "Ig4UgsgZ3pOl3qtw",
     project: "laddercup",
+    title: "Ladder Cup '21",
     thumb: "thumb",
   },
   {
-    id: "b7497728-869c-4df1-9b8b-6dae694999c4",
+    id: "Rh1gRx0ClQql6VwK",
     project: "playgames",
+    title: "Playgames",
     thumb: "thumb",
   },
   {
-    id: "48847a7b-e9f7-4c4a-a01a-24d3f4609b23",
+    id: "xAWAPaJBTHUID8C0",
     project: "mastenis",
+    title: "Más Tenis & Set",
+    thumb: "thumb",
+  },
+  {
+    id: "V5M3wWrqLJuldTNc",
+    project: "ligaepica",
+    title: "Liga Epica",
+    thumb: "thumb",
+  },
+  {
+    id: "AEdTIkz6Jv4kzUhN",
+    project: "arrimate",
+    title: "Arrimate",
+    thumb: "thumb",
+  },
+  {
+    id: "hJqNLDYXNIoGrCnu",
+    project: "logos",
+    title: "Varios Logos",
+    thumb: "thumb",
+  },
+  {
+    id: "WIKmUSUYNIbJVh1M",
+    project: "sitio",
+    title: "Este mismo sitio!",
     thumb: "thumb",
   },
 
