@@ -11,7 +11,11 @@ import Footer from "../../components/general/Footer";
 import Separator from "../../components/general/Separator";
 import useWindowSize from "../../utils/useWindowSize";
 import { images } from "../../data/imagesData";
-import { wrap } from "popmotion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper";
+
+import 'swiper/css';
+import "swiper/css/pagination";
 
 
 const Section = styled(Container)`
@@ -131,46 +135,6 @@ const FpdPage = () => {
     duration: 3,
     delay: .2
   }
-
-
-  const paginate = (newDirection) => {
-    setPage([page + newDirection, newDirection]);
-  };
-
-  const variants = {
-    enter: (direction) => {
-      return {
-        x: direction > 0 ? 1000 : -1000,
-        opacity: 0
-      };
-    },
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1
-    },
-    exit: (direction) => {
-      return {
-        zIndex: 0,
-        x: direction < 0 ? 1000 : -1000,
-        opacity: 0
-      };
-    }
-  };
-
-  const [[page, direction], setPage] = useState([0, 0]);
-  /**
-   * Experimenting with distilling swipe offset and velocity into a single variable, so the
-   * less distance a user has swiped, the more velocity they need to register as a swipe.
-   * Should accomodate longer swipes and short flicks without having binary checks on
-   * just distance thresholds and velocity > 0.
-   */
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset, velocity) => {
-    return Math.abs(offset) * velocity;
-  };
-  const imageIndex = wrap(0, images.length, page);
-
 
   const transition = {
     delay: 0.2
@@ -304,51 +268,125 @@ const FpdPage = () => {
           </Col>
         </Row>
       </Section>
-      <Separator backgroundColor="#3a3a3a" fill="#fff" />
-      <div style={{ backgroundColor: "#3a3a3a", width: " 455px", height: " 120px", overflow: "hidden" }}>
-        <AnimatePresence initial={false} custom={direction}>
+      <Separator backgroundColor="#efefef" color="white" />
+      <div style={{ backgroundColor: "#efefef", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+        <motion.h1 style={{ textAlign: "center", textTransform: "uppercase" }}>El logo</motion.h1>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: .5 }}
+          viewport={{ once: true }}
+          style={{ display: "flex", justifyContent: "center", paddingTop: "2rem", paddingBottom: "2rem" }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ x: 130, scale: 1, opacity: 1 }}
+            transition={{ duration: .5 }}
+            viewport={{ once: true }}
+          >
+
+            <motion.img
+              whileInView={{ x: 130, scale: 1, opacity: 0 }}
+              transition={{ duration: .5, delay: 2 }}
+              viewport={{ once: true }}
+              src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/old_logo.png'}`} style={{ maxHeight: "600px" }}
+            />
+          </motion.div>
+          <motion.img
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ x: -120, scale: 1, opacity: 1 }}
+            transition={{ duration: .5, delay: 1.5 }}
+            viewport={{ once: true }}
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/logo.png'}`} style={{ maxHeight: "600px" }}
+          />
+        </motion.div>
+        <motion.p style={{ maxWidth: "40%", textAlign: "center" }}>El antiguo logotipo de FPD no gritaba lo suficiente "fútbol". </motion.p>
+        <motion.p style={{ maxWidth: "40%", textAlign: "center" }}>Para el rediseño decidí ir por algo más obvio y que a su vez muestre una visión más premium.</motion.p>
+      </div>
+      <Separator backgroundColor="white" fill="#efefef" />
+      <Container style={{ paddingTop: "5%", paddingBottom: "5%" }}>
+        <Row>
+          <Col>
+            <motion.h1 style={{ textTransform: "uppercase", fontSize: "2.9rem" }}>Nuevas rutas</motion.h1>
+            <motion.p style={{ width: "70%", fontSize: "1.2rem", letterSpacing: "-1px" }}>
+              Era necesaria una nueva dirección para renovar la
+              producto y ofrecer algo diferente al
+              competencia.
+              No solo en branding y diseño, sino también en
+              tecnología y producto en general.
+              Mi papel era liderar el equipo en un rediseño,
+              el cambio tecnológico y la creación de nuevos
+              productos
+              Tuve que hacer todo el Diseño UX/UI, parte del
+              desarrollo, y tuvo visión para el futuro de nuestra
+              propia API, ya que tenía planes de hacer la aplicación más grande.
+            </motion.p>
+          </Col>
+        </Row>
+      </Container>
+      <Separator backgroundColor="#000" fill="#fff" />
+      <div style={{ backgroundColor: "#000", paddingTop: "5%", paddingBottom: "5%" }}>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={4}
+          // onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // centeredSlides={true}
+          pagination={{
+            dynamicBullets: true,
+            clickable: true
+          }}
+          modules={[Pagination]}
+        >
           {images[0].mockups.map((item, i) => {
             return (
-              <motion.img
-                key={i}
-                // key={i}
-                // src={require(`../../as ${item.thumb}.jpg`)}
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/' + item}`}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.2 }
-                }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                  const swipe = swipePower(offset.x, velocity.x);
-
-                  if (swipe < -swipeConfidenceThreshold) {
-                    paginate(1);
-                  } else if (swipe > swipeConfidenceThreshold) {
-                    paginate(-1);
-                  }
-                }}
-              />
+              <SwiperSlide key={i}>
+                <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/' + item}`} style={{ maxHeight: "600px" }} />
+              </SwiperSlide>
             )
           })}
+        </Swiper>
 
 
-        </AnimatePresence>
+
       </div>
-      <>
-        <div className="next" style={{ fontSize: "4rem" }} onClick={() => paginate(1)}>
-          {"‣"}
-        </div>
-        <div className="prev" style={{ fontSize: "4rem" }} onClick={() => paginate(-1)}>
-          {"‣"}
-        </div>
-      </>
+      <Separator backgroundColor="#fff" fill="#000" />
+      <Container>
+        <Row>
+          <Col style={{ position: "relative" }}>
+            <>
+              <motion.div
+                whileInView={{ scale: [1, 1.3, 1], opacity: [1, 0, 1] }}
+                transition={{ repeat: Infinity, duration: 1.5, delay: .2 }}
+                viewport={{ once: true }}
+                style={{ border: "3px solid rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 45, left: 45 }}
+              />
+              <motion.div
+                whileInView={{ scale: [1, 1.1, 1] }}
+                transition={{ repeat: Infinity, duration: 1.5, delay: .3 }}
+                viewport={{ once: true }}
+                style={{ backgroundColor: "rgb(255,0,0)", borderRadius: "50%", height: "15px", width: "15px", position: "absolute", top: 45, left: 45 }}
+              />
+            </>
+            <>
+              <motion.div
+                whileInView={{ scale: [1, 1.3, 1], opacity: [1, 0, 1] }}
+                transition={{ repeat: Infinity, duration: 1.5, delay: .8 }}
+                viewport={{ once: true }}
+                style={{ border: "3px solid rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 100, left: 45 }}
+              />
+              <motion.div
+                whileInView={{ scale: [1, 1.1, 1] }}
+                transition={{ repeat: Infinity, duration: 1.5, delay: .8 }}
+                viewport={{ once: true }}
+                style={{ backgroundColor: "rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 100, left: 45 }}
+              />
+            </>
+
+            <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_01.png'}`} style={{ maxHeight: "600px" }} />
+          </Col>
+        </Row>
+      </Container>
       <RelatedWorks left="mastenis" right="laddercup" />
       <Footer />
     </Animation>
