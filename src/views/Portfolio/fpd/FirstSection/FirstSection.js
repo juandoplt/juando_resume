@@ -1,5 +1,5 @@
 import { Col } from "react-bootstrap";
-import useWindowSize from "../../../utils/useWindowSize";
+import useWindowSize from "../../../../utils/useWindowSize";
 
 import {
   HeaderText,
@@ -22,7 +22,7 @@ import {
   secondPhoneTransition,
   thirdPhoneTransition,
 }
-  from "./animations";
+  from "./FirstSection.animations";
 
 const FirstSection = () => {
   const { width } = useWindowSize();
@@ -46,21 +46,21 @@ const FirstSection = () => {
             animate={firstPhone}
             transition={firstPhoneTransition}
           >
-            <img src={require('../../../assets/images/fpd/phone_03.png')}
+            <img src={require('../../../../assets/images/fpd/phone_03.png')}
             />
           </PhoneAnimationOne>
           <PhoneAnimationTwo
             animate={secondPhone}
             transition={secondPhoneTransition}
           >
-            <img src={require('../../../assets/images/fpd/phone_01.png')}
+            <img src={require('../../../../assets/images/fpd/phone_01.png')}
             />
           </PhoneAnimationTwo>
           <PhoneAnimationThree
             animate={thirdPhone}
             transition={thirdPhoneTransition}
           >
-            <img src={require('../../../assets/images/fpd/phone_04.png')}
+            <img src={require('../../../../assets/images/fpd/phone_04.png')}
             />
           </PhoneAnimationThree>
         </HeroPhonesContainer>
