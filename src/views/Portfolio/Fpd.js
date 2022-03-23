@@ -16,6 +16,7 @@ import { Pagination } from "swiper";
 
 import 'swiper/css';
 import "swiper/css/pagination";
+import PulseDot from "../../components/general/pulseDot/pulseDot";
 
 
 const Section = styled(Container)`
@@ -304,16 +305,20 @@ const FpdPage = () => {
         <motion.p style={{ maxWidth: "40%", textAlign: "center" }}>Para el rediseño decidí ir por algo más obvio y que a su vez muestre una visión más premium.</motion.p>
       </div>
       <Separator backgroundColor="white" fill="#efefef" />
-      <Container style={{ paddingTop: "5%", paddingBottom: "5%" }}>
+      <Container style={{ paddingTop: "15%", paddingBottom: "15%" }}>
         <Row>
           <Col>
-            <motion.h1 style={{ textTransform: "uppercase", fontSize: "2.9rem" }}>Nuevas rutas</motion.h1>
-            <motion.p style={{ width: "70%", fontSize: "1.2rem", letterSpacing: "-1px" }}>
+            <motion.h1 style={{ textTransform: "uppercase", fontSize: "2.9rem", marginBottom: "2rem" }}>Nuevas rutas</motion.h1>
+            <motion.p style={{ width: "70%", fontSize: "1.1rem", lineHeight: 1.7 }}>
               Era necesaria una nueva dirección para renovar la
               producto y ofrecer algo diferente al
               competencia.
+            </motion.p>
+            <motion.p style={{ width: "70%", fontSize: "1.1rem", lineHeight: 1.7 }}>
               No solo en branding y diseño, sino también en
               tecnología y producto en general.
+            </motion.p>
+            <motion.p style={{ width: "70%", fontSize: "1.1rem", lineHeight: 1.7 }}>
               Mi papel era liderar el equipo en un rediseño,
               el cambio tecnológico y la creación de nuevos
               productos
@@ -321,6 +326,7 @@ const FpdPage = () => {
               desarrollo, y tuvo visión para el futuro de nuestra
               propia API, ya que tenía planes de hacer la aplicación más grande.
             </motion.p>
+            <div style={{ height: 5, width: 100, backgroundColor: "#000", marginTop: "2rem" }}></div>
           </Col>
         </Row>
       </Container>
@@ -354,42 +360,42 @@ const FpdPage = () => {
       <Container>
         <Row>
           <Col style={{ position: "relative" }}>
-            <>
-              <motion.div
-                whileInView={{ scale: [1, 1.3, 1], opacity: [1, 0, 1] }}
-                transition={{ repeat: Infinity, duration: 1.5, delay: .2 }}
-                viewport={{ once: true }}
-                style={{ border: "3px solid rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 45, left: 45 }}
+            <div style={{ position: "relative", maxWidth: "300px", background: "blue" }}>
+              {/* <>
+                <motion.div
+                  whileInView={{ scale: [0, 1.3], opacity: [1, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5, delay: .2 }}
+                  viewport={{ once: true }}
+                  style={{ border: "3px solid rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 45, left: 45 }}
+                />
+                <motion.div
+                  whileInView={{ scale: [1, 1.3, 1] }}
+                  transition={{ repeat: Infinity, duration: 1.5, delay: .3 }}
+                  viewport={{ once: true }}
+                  style={{ backgroundColor: "rgb(255,0,0)", borderRadius: "50%", height: "12px", width: "12px", position: "absolute", top: 49, left: 49 }}
+                />
+              </> */}
+              <PulseDot
+                top="40"
+                left="40"
               />
-              <motion.div
-                whileInView={{ scale: [1, 1.1, 1] }}
-                transition={{ repeat: Infinity, duration: 1.5, delay: .3 }}
-                viewport={{ once: true }}
-                style={{ backgroundColor: "rgb(255,0,0)", borderRadius: "50%", height: "15px", width: "15px", position: "absolute", top: 45, left: 45 }}
+              <PulseDot
+                top="100"
+                left="100"
               />
-            </>
-            <>
-              <motion.div
-                whileInView={{ scale: [1, 1.3, 1], opacity: [1, 0, 1] }}
-                transition={{ repeat: Infinity, duration: 1.5, delay: .8 }}
-                viewport={{ once: true }}
-                style={{ border: "3px solid rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 100, left: 45 }}
+              <PulseDot
+                top="250"
+                right="25"
               />
-              <motion.div
-                whileInView={{ scale: [1, 1.1, 1] }}
-                transition={{ repeat: Infinity, duration: 1.5, delay: .8 }}
-                viewport={{ once: true }}
-                style={{ backgroundColor: "rgb(255,0,0)", borderRadius: "50%", height: "20px", width: "20px", position: "absolute", top: 100, left: 45 }}
-              />
-            </>
 
-            <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_01.png'}`} style={{ maxHeight: "600px" }} />
+              <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_01.png'}`} style={{ maxHeight: "600px" }} />
+            </div>
           </Col>
         </Row>
       </Container>
       <RelatedWorks left="mastenis" right="laddercup" />
       <Footer />
-    </Animation>
+    </Animation >
   );
 }
 
