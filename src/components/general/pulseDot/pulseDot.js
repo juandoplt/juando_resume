@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import { Pulse, Dot } from "./pulseDot.styles";
 

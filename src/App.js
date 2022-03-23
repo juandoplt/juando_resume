@@ -9,7 +9,7 @@ import Home from './views/Home';
 import About from './views/About';
 import Portfolio from './views/Portfolio/Portfolio';
 import Contact from './views/Contact';
-import FpdPage from './views/Portfolio/Fpd';
+import FpdPage from './views/Portfolio/fpd/Fpd';
 import LadderCupPage from './views/Portfolio/LadderCup';
 import PlaygamesPage from './views/Portfolio/Playgames';
 import MasTenisPage from './views/Portfolio/MasTenis';

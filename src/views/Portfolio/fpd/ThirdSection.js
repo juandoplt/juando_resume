@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { useLocation, Link } from 'react-router-dom';
-import { Paragraph, Title } from "../../components/text";
-import Animation from "../../utils/animation";
+import { Paragraph, Title } from "../../../components/text";
+import Animation from "../../../utils/animation";
 import styled from 'styled-components'
-import { Col, Container, Row } from "react-bootstrap";
-import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
+import { Button, Col, Container, OverlayTrigger, Row, Tooltip } from "react-bootstrap";
+import AnimatedListItem from "../../../components/portfolio/AnimatedListItem";
 import { motion, useViewportScroll, useTransform, motionValue, AnimatePresence } from "framer-motion";
-import RelatedWorks from "../../components/general/RelatedWorks";
-import Footer from "../../components/general/Footer";
-import Separator from "../../components/general/Separator";
-import useWindowSize from "../../utils/useWindowSize";
-import { images } from "../../data/imagesData";
+import RelatedWorks from "../../../components/general/RelatedWorks";
+import Footer from "../../../components/general/Footer";
+import Separator from "../../../components/general/Separator";
+import useWindowSize from "../../../utils/useWindowSize";
+import { images } from "../../../data/imagesData";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper";
 
 import 'swiper/css';
 import "swiper/css/pagination";
-import PulseDot from "../../components/general/pulseDot/pulseDot";
+import PulseDot from "../../../components/general/pulseDot/pulseDot";
 
 
 const Section = styled(Container)`
@@ -98,7 +98,7 @@ const HeroDescription = styled(Row)`
 `
 
 
-const FpdPage = () => {
+const ThirdSection = () => {
   const { width } = useWindowSize();
 
   const { scrollYProgress } = useViewportScroll();
@@ -106,6 +106,12 @@ const FpdPage = () => {
 
   const { pathname } = useLocation();
 
+  const renderTooltip = (props) => (
+
+    <Tooltip id="button-tooltip" {...props}>
+      Simple tooltip
+    </Tooltip>
+  );
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, [pathname]);
@@ -142,44 +148,7 @@ const FpdPage = () => {
   }
   return (
 
-    <Animation transition={.45}>
-      <Hero>
-        <motion.div
-          animate={firstPhone}
-          transition={transitionMobilePhone}
-          style={{ position: "absolute", right: 0, zIndex: 3 }}
-        >
-          <img src={require('../../assets/images/fpd/phone_01.png')}
-          />
-        </motion.div>
-        <motion.div
-          animate={secondPhone}
-          transition={transitionMobilePhone}
-          style={{ position: "absolute", right: 0, zIndex: 4 }}
-        >
-          <img src={require('../../assets/images/fpd/phone_03.png')}
-          />
-        </motion.div>
-        <motion.div
-          animate={thirdPhone}
-          transition={transitionMobilePhone}
-          style={{ position: "absolute", right: 0, zIndex: 3 }}
-        >
-          <img src={require('../../assets/images/fpd/phone_04.png')}
-          />
-        </motion.div>
-        <Section>
-          <HeroDescription>
-            <Col>
-              <Titular>FPD</Titular>
-              <Subtitle>Portal de estadísticas y noticias de fútbol</Subtitle>
-              <Description>
-                Este es uno de los proyectos más grandes realizados, branding, desarrollo web y mobile, estructuración del backend, producción audiovisual y diseño de la interfaz y la experiencia de usuario de la app mobile.
-              </Description>
-            </Col>
-          </HeroDescription>
-        </Section>
-      </Hero>
+    <>
       <Separator backgroundColor="#fff" fill="#000" />
       <Section style={{ paddingTop: "2%", paddingBottom: "2%", height: "100vh" }}>
         <Row style={{ alignItems: "center" }}>
@@ -201,7 +170,7 @@ const FpdPage = () => {
               style={{ position: "absolute", top: 0 }}
             >
               <motion.img
-                src={require('../../assets/images/fpd/iphone-4.png')}
+                src={require('../../../assets/images/fpd/iphone-4.png')}
                 whileInView={{ opacity: 0 }}
                 viewport={{ once: true }}
                 transition={{
@@ -226,7 +195,7 @@ const FpdPage = () => {
               viewport={{ once: true }}
               style={{ position: "absolute", top: 0, opacity: 0 }}
             >
-              <img src={require('../../assets/images/fpd/phone_04.png')}
+              <img src={require('../../../assets/images/fpd/phone_04.png')}
               />
             </motion.div>
           </Col>
@@ -375,10 +344,9 @@ const FpdPage = () => {
                   style={{ backgroundColor: "rgb(255,0,0)", borderRadius: "50%", height: "12px", width: "12px", position: "absolute", top: 49, left: 49 }}
                 />
               </> */}
-              <PulseDot
-                top="40"
-                left="40"
-              />
+
+              
+
               <PulseDot
                 top="100"
                 left="100"
@@ -393,10 +361,8 @@ const FpdPage = () => {
           </Col>
         </Row>
       </Container>
-      <RelatedWorks left="mastenis" right="laddercup" />
-      <Footer />
-    </Animation >
+    </>
   );
 }
 
-export default FpdPage;
+export default ThirdSection;
