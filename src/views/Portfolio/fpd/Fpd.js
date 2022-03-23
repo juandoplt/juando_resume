@@ -19,8 +19,8 @@ const FpdPage = () => {
     <Animation transition={.45}>
       <FirstSection />
       <SecondSection />
-      {/* <ThirdSection />
-      <FourthSection />
+      <ThirdSection />
+      {/* <FourthSection />
       <FifthSection />
       <SixthSection /> */}
       <RelatedWorks left="mastenis" right="laddercup" />

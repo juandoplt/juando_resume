@@ -25,7 +25,6 @@ import {
   from "./FirstSection.animations";
 
 const FirstSection = () => {
-  const { width } = useWindowSize();
 
   return (
     <>

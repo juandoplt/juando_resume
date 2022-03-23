@@ -10,6 +10,10 @@ const Hero = styled.div`
   overflow: hidden;
   flex-direction:column;
   display: flex;
+  background-image: url(${process.env.PUBLIC_URL + '/img/portfolio/fpd/background_second_section.jpg'});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   @media (min-width: 576px) { 
     align-items:center;
   }

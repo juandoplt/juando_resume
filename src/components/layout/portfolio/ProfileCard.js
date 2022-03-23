@@ -48,7 +48,7 @@ const DownloadCurriculum = styled(LinkedinLink)`
     color: #4caf50;
     border: 2px solid #4caf50;
     &:hover {
-        color: white;
+        color: #FFFFFF;
         background-color:#4caf50;
         border: 2px solid #4caf50;
         -moz-transform: translateY(-2px);

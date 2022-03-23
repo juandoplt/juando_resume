@@ -22,12 +22,13 @@ const AnimatedListItem = ({
         <ToolsListItem>
             <motion.div
                 whileInView={{
-                    opacity: 1,
-                    scale: [0, 1.2, 1],
-                    background: ["rgb(103,58,183)", "rgb(0,0,0)"],
+                    opacity: [0, 1],
+                    scale: [0, 1.3, 1],
+                    y: [1000, 0],
+                    background: ["rgb(0,0,0)", "rgb(103,58,183)"],
                 }}
-                transition={{ duration: .5, delay }}
-                style={{ opacity: 0, borderRadius: "10px" }}
+                transition={{ type: "spring", duration: .5, delay }}
+                style={{ borderRadius: "10px" }}
                 viewport={{ once: true }}
             >
                 <ToolsListItemLabel>{text}</ToolsListItemLabel>

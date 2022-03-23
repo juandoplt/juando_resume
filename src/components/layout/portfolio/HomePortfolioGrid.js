@@ -58,7 +58,7 @@ const PortfolioLink = styled(Link)`
 const HomePortfolioGrid = () => {
     return (
         <>
-            <Separator fill="white" backgroundColor="#212529" />
+            <Separator fill="#FFFFFF" backgroundColor="#212529" />
             <Section paddingBottom="5%" paddingTop="5%" backgroundColor="#212529">
                 <Container>
                     <Row>

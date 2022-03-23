@@ -22,22 +22,22 @@ const thirdPhone = {
 const firstPhoneTransition = {
     type: "spring",
     stiffness: 0,
-    duration: 4,
-    delay: .4
+    duration: 1,
+    delay: .3
 }
 
 const secondPhoneTransition = {
     type: "spring",
     stiffness: 0,
-    duration: 4,
-    delay: .2
+    duration: 1,
+    delay: .1
 }
 
 const thirdPhoneTransition = {
     type: "spring",
     stiffness: 0,
-    duration: 4,
-    delay: .7
+    duration: 1,
+    delay: .4
 }
 
 export {

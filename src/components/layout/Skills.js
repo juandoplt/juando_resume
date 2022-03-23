@@ -379,7 +379,7 @@ const Skills = () => {
                     </RealRow>
                 </Container>
             </Section>
-            <Separator fill="#e9ecef" backgroundColor="white" />
+            <Separator fill="#e9ecef" backgroundColor="#FFFFFF" />
         </>
     );
 }

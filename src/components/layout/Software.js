@@ -281,7 +281,7 @@ const Software = () => {
                     </Row>
                 </Container>
             </Section>
-            <Separator fill="#8963e2" backgroundColor="white" />
+            <Separator fill="#8963e2" backgroundColor="#FFFFFF" />
         </>
     );
 }
