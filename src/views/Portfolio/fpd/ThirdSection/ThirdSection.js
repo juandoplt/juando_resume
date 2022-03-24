@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import Separator from "../../../../components/general/Separator";
 import { Container, Row, Col } from "react-bootstrap";
 
 

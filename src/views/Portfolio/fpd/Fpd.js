@@ -14,9 +14,9 @@ import SixthSection from "./SixthSection/SixthSection";
 const FpdPage = () => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
 
   return (
     <Animation transition={.45}>
@@ -24,8 +24,8 @@ const FpdPage = () => {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      {/* <FifthSection />
-      <SixthSection /> */}
+      <FifthSection />
+       {/* <SixthSection /> */}
       <RelatedWorks left="mastenis" right="laddercup" />
       <Footer />
     </Animation>

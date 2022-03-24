@@ -7,7 +7,8 @@ const SvgContainer = styled.div`
 `
 
 const SvgItem = styled.svg`
-    fill: ${props => props.fill || "#fff"}
+    fill: ${props => props.fill || "#fff"};
+    transform: translateY(${props => props.translateY || 0});
 `
 
 export { SvgContainer, SvgItem };

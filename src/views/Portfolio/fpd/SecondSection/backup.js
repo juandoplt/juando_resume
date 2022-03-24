@@ -192,7 +192,9 @@ const ThirdSection = () => {
               viewport={{ once: true }}
               style={{ position: "absolute", top: 0, opacity: 0 }}
             >
-              <img src={require('../../../assets/images/fpd/phone_04.png')}
+              
+              <img src={`${process.env.PUBLIC_URL + '/img/phone_04'}`} alt="" />
+
               />
             </motion.div>
           </Col>

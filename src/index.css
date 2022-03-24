@@ -6,8 +6,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
+.swiper{
+    overflow: visible!important;
+}
+
 .swiper-pagination-bullet{
     background:#fff!important;
+}
+.swiper-horizontal>.swiper-pagination-bullets{
+    bottom: -40px!important;
 }
 
 .noselect {
