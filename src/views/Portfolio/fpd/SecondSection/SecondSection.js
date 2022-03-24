@@ -114,34 +114,47 @@ const SecondSection = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: .5 }}
                     viewport={{ once: true }}
-                    style={{ padding: 30, zIndex: 3, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%" }}
+                    style={{ padding: "0.5rem", zIndex: 3, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: "100%" }}
                 >
-                    <h1 style={{ color: "#fff", textTransform: "uppercase" }}>Características del producto</h1>
+                    <h1 style={{ color: "#fff", textTransform: "uppercase", textAlign: "center" }}>Características del producto</h1>
                     <ElementsList>
                         <motion.li
-                            animate={{ y: [0,10,0],filter:["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
-                            transition={{ type: "spring", stiffness: 440, repeat: Infinity, duration: 2, delay: .2 }}
+                            // animate={{ y: [0, 10, 0], filter: ["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
+                            transition={{ type: "spring", stiffness: 100, repeat: Infinity, duration: .2 }}
+                            whileTap={{
+                                rotateY:180
+                            }}
                         >
                             <div></div>
                             <span>Diseño UX/UI</span>
                         </motion.li>
                         <motion.li
-                            animate={{ y: [0,10,0],filter:["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
-                            transition={{ type: "spring", stiffness: 440, repeat: Infinity, duration: 2, delay: .4 }}
+                            // animate={{ y: [0, 10, 0], filter: ["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
+                            // transition={{ type: "spring", stiffness: 440, repeat: Infinity, duration: 2, delay: .4 }}
+                            transition={{ type: "spring", stiffness: 100, repeat: Infinity, duration: .2 }}
+                            whileTap={{
+                                rotateY:180
+                            }}
                         >
                             <div></div>
                             <span>Desarrollo mobile y web</span>
                         </motion.li>
                         <motion.li
-                            animate={{ y: [0,10,0],filter:["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
-                            transition={{ type: "spring", stiffness: 440, repeat: Infinity, duration: 2, delay: .6 }}
+                            // animate={{ y: [0, 10, 0], filter: ["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
+                            transition={{ type: "spring", stiffness: 100, repeat: Infinity, duration: .2 }}
+                            whileTap={{
+                                rotateY:180
+                            }}
                         >
                             <div></div>
                             <span>Rediseño de logo</span>
                         </motion.li>
                         <motion.li
-                            animate={{ y: [0,10,0],filter:["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
-                            transition={{ type: "spring", stiffness: 440, repeat: Infinity, duration: 2, delay: .8 }}
+                            // animate={{ y: [0, 10, 0], filter: ["drop-shadow(0px 0px 20px rgba(103, 58, 183,.3)", "drop-shadow(0px 0px 10px rgba(103, 58, 183,.3)"] }}
+                            transition={{ type: "spring", stiffness: 100, repeat: Infinity, duration: .2 }}
+                            whileTap={{
+                                rotateY:180
+                            }}
                         >
                             <div></div>
                             <span>Producción audiovisual</span>

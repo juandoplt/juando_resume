@@ -8,7 +8,7 @@ const ToolsListItem = styled.li`
 const ToolsListItemLabel = styled.span`
   font-size: .8rem;
   display: block;
-  color: #fff;
+  color: #000;
   padding: 0.1rem 0.8rem;
 `
 
@@ -25,7 +25,7 @@ const AnimatedListItem = ({
                     opacity: [0, 1],
                     scale: [0, 1.3, 1],
                     y: [1000, 0],
-                    background: ["rgb(0,0,0)", "rgb(103,58,183)"],
+                    background: ["rgb(103,58,183)", "rgb(255,255,255)"],
                 }}
                 transition={{ type: "spring", duration: .5, delay }}
                 style={{ borderRadius: "10px" }}

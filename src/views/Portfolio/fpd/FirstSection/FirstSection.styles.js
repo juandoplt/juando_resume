@@ -12,9 +12,12 @@ const Hero = styled.div`
   display: flex;
   background-image: url(${process.env.PUBLIC_URL + '/img/portfolio/fpd/background_second_section.jpg'});
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
+  background-size: 350%;
+  background-attachment: fixed;
+  background-position: center;
   @media (min-width: 576px) { 
+    background-size: cover;
     align-items:center;
   }
 `

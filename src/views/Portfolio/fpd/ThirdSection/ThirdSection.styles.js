@@ -8,8 +8,8 @@ const Section = styled.div`
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   padding-top: 5%;
-   padding-bottom: 5%
+   padding-top: 2%;
+   padding-bottom: 2%
 `
 
 const AnimatedTitle = styled(motion.h1)`
