@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 
 import {
@@ -17,12 +18,40 @@ import {
 }
   from "./ThirdSection.animations";
 
+
+
+const Box = ({ speed }) => {
+  const { scrollYProgress } = useViewportScroll();
+  const yValue = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, 100 * speed]
+  );
+  console.log(yValue)
+  return (
+    <motion.div
+      initial={{ opacity: 0,y:yValue }}
+      animate={{ opacity: 1, y: yValue }}
+      transition={{ duration: 1 }}
+    >
+      <img src="https://i.picsum.photos/id/302/200/300.jpg?hmac=b5e6gUSooYpWB3rLAPrDpnm8PsPb84p_NXRwD-DK-1I" />
+    </motion.div>
+  )
+}
+
+
 const ThirdSection = () => {
   return (
     <>
       <Section>
         <Container>
           <Row>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <Box speed={0} />
+              <Box speed={0.4} />
+              <Box speed={-2} />
+              <Box speed={4} />
+            </div>
             <Col>
               <AnimatedContainer
                 initial={{ opacity: 0 }}

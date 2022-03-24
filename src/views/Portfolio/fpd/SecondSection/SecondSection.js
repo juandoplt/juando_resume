@@ -18,9 +18,8 @@ import {
 
 
 
-
-
 const SecondSection = () => {
+
     return (
         <>
             <Product>
