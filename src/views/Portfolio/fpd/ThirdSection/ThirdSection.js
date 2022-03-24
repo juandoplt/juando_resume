@@ -69,7 +69,7 @@ const ThirdSection = () => {
           </Row>
         </Container>
       </Section>
-      <Separator backgroundColor="#FFFFFF" fill="#efefef" />
+      {/* <Separator backgroundColor="#FFFFFF" fill="#efefef" /> */}
     </>
   );
 }

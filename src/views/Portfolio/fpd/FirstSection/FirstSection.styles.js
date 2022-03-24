@@ -97,6 +97,19 @@ const PhoneAnimationThree = styled(PhoneAnimationOne)`
   }
 `
 
+const ShadowGradient = styled.div`
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 70%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 70%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+  top:0;
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:5;
+`
+
 export {
   Hero,
   HeroContainer,
@@ -105,6 +118,7 @@ export {
   HeaderText,
   SubHeaderText,
   DescriptionText,
+  ShadowGradient,
   PhoneAnimationOne,
   PhoneAnimationTwo,
   PhoneAnimationThree,

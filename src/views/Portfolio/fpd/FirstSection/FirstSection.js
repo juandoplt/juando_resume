@@ -8,6 +8,7 @@ import {
   Hero,
   HeroContainer,
   HeroRow,
+  ShadowGradient,
   PhoneAnimationOne,
   PhoneAnimationTwo,
   PhoneAnimationThree,
@@ -41,6 +42,7 @@ const FirstSection = () => {
           </HeroRow>
         </HeroContainer>
         <HeroPhonesContainer>
+          <ShadowGradient />
           <PhoneAnimationOne
             animate={firstPhone}
             transition={firstPhoneTransition}
