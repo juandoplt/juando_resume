@@ -1,8 +1,5 @@
-import React from 'react';
+import * as React from "react";
 import { Routes, Route } from 'react-router-dom';
-import { useHistory } from 'react-router';
-import { AnimatePresence } from 'framer-motion';
-
 import Navigation from "./components/layout/navigation/navbar/NavBar";
 
 import Home from './views/Home';
@@ -16,6 +13,7 @@ import MasTenisPage from './views/Portfolio/MasTenis';
 import ArrimatePage from './views/Portfolio/Arrimate';
 import NotFound from './views/NotFound';
 import { useEffect } from 'react';
+import { Placeholder } from "react-bootstrap";
 
 const App = () => {
   const queryString = require('query-string');
@@ -26,6 +24,10 @@ const App = () => {
       document.location.assign(`${document.location.origin}${redirect}`);
     }
   }, [])
+
+
+  const LazyHome = React.lazy(() => import("./views/Portfolio/fpd/Fpd"));
+
   return (
     <>
       <Navigation />
@@ -33,7 +35,14 @@ const App = () => {
         <Route exact index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/fpd" element={<FpdPage />} />
+        <Route
+          path="/fpd"
+          element={
+            <React.Suspense fallback={<Placeholder xs={6} />}>
+              <LazyHome />
+            </React.Suspense>
+          }
+        />
         <Route path="/laddercup" element={<LadderCupPage />} />
         <Route path="/playgames" element={<PlaygamesPage />} />
         <Route path="/arrimate" element={<ArrimatePage />} />
