@@ -4,12 +4,12 @@ import {useLocation} from 'react-router-dom';
 import Footer from "../../../components/general/Footer";
 import RelatedWorks from "../../../components/general/RelatedWorks";
 import Animation from "../../../utils/animation";
-import FirstSection from "./FirstSection/FirstSection";
-import SecondSection from "./SecondSection/SecondSection";
-import ThirdSection from "./ThirdSection/ThirdSection";
-import FourthSection from "./FourthSection/FourthSection";
-import FifthSection from "./FifthSection/FifthSection";
-import SixthSection from "./SixthSection/SixthSection";
+import Hero from "./Hero/HeroSection";
+import ProductDescription from "./ProductDescription/ProductDescriptionSection";
+import Logo from "./Logo/LogoSection";
+import Wireframe from "./Wireframe/WireframeSection";
+import App from "./App/AppSection";
+import Keypoints from "./Keypoints/KeypointsSection";
 
 const FpdPage = () => {
   const { pathname } = useLocation();
@@ -20,12 +20,12 @@ const FpdPage = () => {
 
   return (
     <Animation transition={.45}>
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
-       {/* <SixthSection /> */}
+      <Hero />
+      <ProductDescription />
+      <Logo />
+      <Wireframe />
+      <App />
+      <Keypoints />
       <RelatedWorks left="mastenis" right="laddercup" />
       <Footer />
     </Animation>

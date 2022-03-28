@@ -9,16 +9,16 @@ import {
     Product,
     ProductTitle,
     ProductAnimationContainer,
-} from "./SecondSection.styles";
+} from "./ProductDescriptionSection.styles";
 
 import {
     transitionLi,
 }
-    from "./SecondSection.animations";
+    from "./ProductDescriptionSection.animations";
 
 
 
-const SecondSection = () => {
+const ProductDescriptionSection = () => {
 
     return (
         <>
@@ -88,4 +88,4 @@ const SecondSection = () => {
     )
 }
 
-export default SecondSection;
+export default ProductDescriptionSection;

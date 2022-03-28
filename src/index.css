@@ -26,3 +26,7 @@ h1, h2, h3, h4, h5, h6 {
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Opera and Firefox */
   }
+
+  .swiper-3d .swiper-slide-shadow{
+      background: transparent!important;
+  }

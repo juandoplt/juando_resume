@@ -13,7 +13,7 @@ import {
   PhoneAnimationTwo,
   PhoneAnimationThree,
   HeroPhonesContainer
-} from "./FirstSection.styles";
+} from "./HeroSection.styles";
 
 import {
   firstPhone,
@@ -23,9 +23,9 @@ import {
   secondPhoneTransition,
   thirdPhoneTransition,
 }
-  from "./FirstSection.animations";
+  from "./HeroSection.animations";
 
-const FirstSection = () => {
+const HeroSection = () => {
 
   return (
     <>
@@ -70,4 +70,4 @@ const FirstSection = () => {
   );
 }
 
-export default FirstSection;
+export default HeroSection;

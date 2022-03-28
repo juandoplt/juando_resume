@@ -49,28 +49,42 @@ const TabsSelector = styled(Tabs)`
   }
 `
 
-const FifthSection = () => {
+const KeypointsSection = () => {
   return (
     <KeyPointsContainer>
       <Row>
         <KeyPointsTitle>Puntos Clave</KeyPointsTitle>
-
-        <div style={{height:"100vh"}}>
+        <Col>
+          <p>
+            Lorem Ipsum
+          </p>
+        </Col>
+        <Col>
           <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_01.png'}`} alt="" style={{ height: "500px", margin: "0 auto" }} />
-
-        </div>
-        <div style={{height:"100vh"}}>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_02.png'}`} alt="" style={{ height: "500px", margin: "0 auto" }} />
-
-        </div>
-        <div style={{height:"100vh"}}>
+        </Col>
+        <Col>
+          <p>
+            Lorem Ipsum
+          </p>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <p>
+            Lorem Ipsum
+          </p>
+        </Col>
+        <Col>
           <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_03.png'}`} alt="" style={{ height: "500px", margin: "0 auto" }} />
-
-        </div>
-
+        </Col>
       </Row>
     </KeyPointsContainer>
   )
 }
 
-export default FifthSection;
+export default KeypointsSection;
