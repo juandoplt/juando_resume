@@ -9,7 +9,8 @@ const Section = styled.div`
    align-items: center;
    flex-direction: column;
    padding-top: 2%;
-   padding-bottom: 2%
+   padding-bottom: 2%;
+   overflow:hidden;
 `
 
 const AnimatedTitle = styled(motion.h1)`

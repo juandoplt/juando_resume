@@ -54,50 +54,20 @@ const FifthSection = () => {
     <KeyPointsContainer>
       <Row>
         <KeyPointsTitle>Puntos Clave</KeyPointsTitle>
-        <TabsContainer>
-          <TabsSelector
-            defaultActiveKey="home"
-            transition={false}
-          >
-            <Tab eventKey="home" title="Home">
-              <Container>
-                <Row>
-                  <Col>
-                    <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_01.png'}`} alt="" style={{height:"500px",margin:"0 auto"}}/>
-                  </Col>
-                  <Col>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper, massa feugiat dapibus sodales, nisi velit aliquet mi, nec fermentum lectus justo nec risus. Nulla in ex ac mi aliquet blandit. Cras vehicula mauris lacus, at commodo purus cursus vel. Aenean malesuada facilisis ullamcorper.
-                  </Col>
-                </Row>
-              </Container>
-            </Tab>
-            <Tab eventKey="profile" title="Profile">
-              <Container>
-                <Row>
-                  <Col>
-                    <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_02.png'}`} alt="" style={{height:"500px",margin:"0 auto"}}/>
-                  </Col>
-                  <Col>
-                    Suspendisse a eleifend velit. Donec mollis mollis justo, non dignissim libero. Cras at purus nisi. Sed sagittis purus in massa tincidunt pharetra.
-                  </Col>
-                </Row>
-              </Container>
-            </Tab>
-            <Tab eventKey="contact" title="Contact">
-              <Container>
-                <Row>
-                  <Col>
-                    <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_03.png'}`} alt="" style={{height:"500px",margin:"0 auto"}} />
-                  </Col>
-                  <Col>
-                  Mauris in dui neque. Quisque ultrices purus metus, quis suscipit ligula pharetra eu. In auctor nibh eget nisi auctor, et iaculis nisl tincidunt. 
-                  </Col>
-                </Row>
-              </Container>
-            </Tab>
-          </TabsSelector>
 
-        </TabsContainer>
+        <div style={{height:"100vh"}}>
+          <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_01.png'}`} alt="" style={{ height: "500px", margin: "0 auto" }} />
+
+        </div>
+        <div style={{height:"100vh"}}>
+          <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_02.png'}`} alt="" style={{ height: "500px", margin: "0 auto" }} />
+
+        </div>
+        <div style={{height:"100vh"}}>
+          <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/phone_03.png'}`} alt="" style={{ height: "500px", margin: "0 auto" }} />
+
+        </div>
+
       </Row>
     </KeyPointsContainer>
   )
