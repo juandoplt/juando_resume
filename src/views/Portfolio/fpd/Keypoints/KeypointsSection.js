@@ -22,9 +22,9 @@ const KeypointsSection = () => {
             </Col>
             <Col lg={6}>
               <div style={{ position: "relative", width: "90%", margin: "0 auto" }}>
-                <PulseDot right="17%" top="20%" size={20} color="rgba(70, 255, 64,.9)" />
-                <PulseDot left="12%" top="17%" size={18} color="rgba(147, 64, 255,.9)" />
-                <PulseDot left="50%" top="30%" size={25} color="rgba(64, 188, 255,1)" />
+                <PulseDot right="17%" top="20%" size={20} color="rgba(255,0,0,.9)" />
+                <PulseDot left="12%" top="17%" size={18} color="rgba(255,0,0,.9)" />
+                <PulseDot left="50%" top="30%" size={25} color="rgba(255,0,0,1)" />
                 <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/widget.png'}`} alt="" style={{ width: "100%", margin: "0 auto", display: "block" }} className="noselect" />
               </div>
             </Col>
@@ -37,9 +37,9 @@ const KeypointsSection = () => {
           <KeyPointsRow>
             <Col lg={6}>
               <div style={{ position: "relative", width: "100%", margin: "0 auto" }}>
-                <PulseDot right="12%" top="9%" size={20} color="rgba(70, 255, 64,.9)" />
-                <PulseDot left="12%" top="14%" size={18} color="rgba(147, 64, 255,.9)" />
-                <PulseDot right="10%" top="18%" size={25} color="rgba(64, 188, 255,1)" />
+                <PulseDot right="12%" top="9%" size={20} color="rgba(255,0,0,.9)" />
+                <PulseDot left="12%" top="14%" size={18} color="rgba(255,0,0,.9)" />
+                <PulseDot right="10%" top="18%" size={25} color="rgba(255,0,0,1)" />
                 <video style={{ width: "100%" }} muted autoPlay loop>
                   <source src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/video_ux.mp4'}`} type="video/mp4" />
                 </video>
@@ -64,9 +64,9 @@ const KeypointsSection = () => {
             </Col>
             <Col lg={6}>
               <div style={{ position: "relative", width: "100%", margin: "0 auto" }}>
-                <PulseDot right="17%" top="20%" size={20} color="rgba(70, 255, 64,.9)" />
-                <PulseDot left="12%" top="17%" size={18} color="rgba(147, 64, 255,.9)" />
-                <PulseDot left="50%" top="30%" size={25} color="rgba(64, 188, 255,1)" />
+                <PulseDot right="17%" top="20%" size={20} color="rgba(255,0,0,.9)" />
+                <PulseDot left="12%" top="17%" size={18} color="rgba(255,0,0,.9)" />
+                <PulseDot left="50%" top="30%" size={25} color="rgba(255,0,0,1)" />
                 <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/002.png'}`} alt="" style={{ width: "100%", margin: "0 auto", display: "block" }} className="noselect" />
               </div>
             </Col>

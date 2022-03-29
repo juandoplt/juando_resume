@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 const Pulse = styled(motion.div)`
     border: 3px solid ${props => props.color || "rgb(255,0,0)"};
+    background-color: rgba(255,0,0,1);
     border-radius: 50%;
     height: 100%;
     width: 100%;

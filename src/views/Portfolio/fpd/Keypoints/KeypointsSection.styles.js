@@ -4,9 +4,13 @@ import { Container, Row } from "react-bootstrap";
 const KeyPointsContainer = styled.div`
   background-color: ${props => props.background || "white"};
   .container {
-    padding-top:4%;
-    padding-bottom:4%;
+    padding-top:15%;
+    padding-bottom:15%;
     overflow-x:hidden;
+    @media (min-width: 576px) { 
+      padding-top:4%;
+      padding-bottom:4%;
+    }
   }
 `
 
@@ -22,7 +26,10 @@ const KeyPointsRow = styled(Row)`
 const KeyPointsTitle = styled.h1`
   text-align:center;
   text-transform:uppercase;
-  margin-bottom:3rem;
+  margin-bottom:1rem;
+  @media (min-width: 576px) { 
+    margin-bottom:3rem;
+  }
 `
 
 export {

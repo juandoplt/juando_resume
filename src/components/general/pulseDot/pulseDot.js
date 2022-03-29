@@ -22,13 +22,13 @@ const PulseDot = ({
             width: size,
         }}>
             <Pulse
-                whileInView={{ scale: [0, 1.3], opacity: [.8, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5, delay: .4 }}
+                whileInView={{ scale: [0, 1.4], opacity: [.8, .1] }}
+                transition={{ repeat: Infinity, duration: 1.5, delay: .5 }}
                 viewport={{ once: true }}
                 color={color}
             />
             <Pulse
-                whileInView={{ scale: [0, 1.3], opacity: [1, 0] }}
+                whileInView={{ scale: [0, 1.2], opacity: [1, .1] }}
                 transition={{ repeat: Infinity, duration: 1.5, delay: .2 }}
                 viewport={{ once: true }}
                 color={color}

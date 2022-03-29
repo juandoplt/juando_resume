@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import Footer from "../../../components/general/Footer";
 import RelatedWorks from "../../../components/general/RelatedWorks";
@@ -10,6 +10,8 @@ import Logo from "./Logo/LogoSection";
 import Wireframe from "./Wireframe/WireframeSection";
 import App from "./App/AppSection";
 import Keypoints from "./Keypoints/KeypointsSection";
+import Show from "./Show/ShowSection";
+import ShowsDescription from "./ShowsDescription/ShowsDescriptionSection";
 
 const FpdPage = () => {
   const { pathname } = useLocation();
@@ -26,6 +28,8 @@ const FpdPage = () => {
       <Wireframe />
       <App />
       <Keypoints />
+      <ShowsDescription />
+      <Show />
       <RelatedWorks left="mastenis" right="laddercup" />
       <Footer />
     </Animation>
