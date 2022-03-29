@@ -8,8 +8,8 @@ const Section = styled.div`
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   padding-top: 2%;
-   padding-bottom: 2%;
+   padding-top: 4%;
+   padding-bottom: 4%;
    overflow:hidden;
 `
 
@@ -51,7 +51,7 @@ const AnimatedParagraph = styled(motion.p)`
 `
 
 const AnimatedImage = styled(motion.img)`
-  max-height: 200px;
+  max-height: 200px;  
   @media (min-width: 576px) { 
     max-height: 244px
   }

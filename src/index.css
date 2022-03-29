@@ -1,32 +1,45 @@
 body {
-    font-family: 'Roboto Mono', monospace!important;
+    font-family: 'Roboto Mono', monospace !important;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
 
-.swiper{
-    overflow: visible!important;
+.swiper {
+    overflow: visible !important;
 }
 
-.swiper-pagination-bullet{
-    background:#fff!important;
+.swiper-pagination-bullet {
+    background: #fff !important;
 }
-.swiper-horizontal>.swiper-pagination-bullets{
-    bottom: -40px!important;
+
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: -40px !important;
 }
 
 .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
                                     supported by Chrome, Opera and Firefox */
-  }
+}
 
-  .swiper-3d .swiper-slide-shadow{
-      background: transparent!important;
-  }
+.swiper-3d .swiper-slide-shadow {
+    background: transparent !important;
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    bottom: -50px !important;
+    top: auto !important;
+}
