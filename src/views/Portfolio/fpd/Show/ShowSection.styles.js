@@ -9,13 +9,47 @@ const SliderContainer = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#212121',GradientType=0 ); /* IE6-9 */
   padding-top: 10%;
   padding-bottom: 25%;
-  transform: translateY(-1px);
   overflow:hidden;
-  display:flex;
-  flex-wrap:wrap;
   @media (min-width: 576px) { 
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
+  }
+  .parallax-video{
+     position:relative;
+     height:100%;
+     width:100%;
+     padding:5%;
+     margin:2% 0;
+     background-color:black;
+     @media (min-width: 576px) { 
+       margin:10% 0;
+       padding:0%;
+       width:60%;
+    }
+  }
+  .parallax-video:nth-child(2){
+      left:auto;
+      @media (min-width: 576px) { 
+        left:4%;
+      }
+  }
+  .parallax-video:nth-child(3){
+      left:auto;
+      @media (min-width: 576px) { 
+        left:30%;
+      }
+  }
+  .parallax-video:nth-child(4){
+      left:auto;
+      @media (min-width: 576px) { 
+        left:12%;
+      }
+  }
+  .parallax-video:nth-child(5){
+      left:auto;
+      @media (min-width: 576px) { 
+        left:38%;
+      }
   }
 `
 
@@ -25,13 +59,14 @@ const SliderTitle = styled.h1`
   width:100%;
   text-transform: uppercase;
   margin-top: 1rem; 
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  @media (min-width: 576px) { 
+    margin-bottom: 3rem;
+  }
 `
 
 const SwiperContent = styled.div`
-  width: 50%; 
   margin: 0 auto;
-  height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -42,10 +77,18 @@ const SwiperContent = styled.div`
   }
 
   @media (min-width: 576px) { 
-    // width: 45%;
+    flex-direction:row;
     iframe{
-      height:500px;
+      height:440px;
     }
+  }
+`
+
+const SwiperTextContent = styled.div`
+  padding: 15px;
+  width: 100%;
+  @media (min-width: 576px) { 
+    width: 70%;
   }
 `
 
@@ -62,5 +105,6 @@ export {
   SliderContainer,
   SliderTitle,
   SwiperImage,
-  SwiperContent
+  SwiperContent,
+  SwiperTextContent
 };

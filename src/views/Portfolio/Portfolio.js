@@ -31,7 +31,7 @@ const frameVariants = {
 const imageVariants = {
   hover: {
     scale: 1.1,
-    filter: "grayscale(70%) blur(1px)",
+    filter: "grayscale(70%) blur(4px)",
   }
 };
 
