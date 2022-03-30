@@ -31,7 +31,7 @@ const KeypointsSection = () => {
           </KeyPointsRow>
         </Container>
       </KeyPointsContainer>
-      <Separator fill="#fff" backgroundColor="#000" />
+      <Separator fill="#fff" backgroundColor="#000" translateY="-2px"/>
       <KeyPointsContainer background="black">
         <Container>
           <KeyPointsRow>
@@ -53,7 +53,7 @@ const KeypointsSection = () => {
           </KeyPointsRow>
         </Container>
       </KeyPointsContainer>
-      <Separator backgroundColor="#fff" fill="#000"/>
+      <Separator backgroundColor="#fff" fill="#000" translateY="-2px"/>
       <KeyPointsContainer>
         <Container>
           <KeyPointsRow>

@@ -39,7 +39,7 @@ const AppSection = () => {
                     })}
                 </Swiper>
             </SliderContainer>
-            <Separator fill="#000" backgroundColor="#fff" translateY="-1px" />
+            <Separator fill="#000" backgroundColor="#fff" translateY="-2px" />
         </>
     )
 }

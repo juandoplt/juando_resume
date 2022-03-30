@@ -5,17 +5,9 @@ import {
   Section,
   AnimatedTitle,
   AnimatedContainer,
-  AnimatedOldLogoContainer,
-  AnimatedNewLogoContainer,
   AnimatedParagraph,
-  AnimatedImage
 } from "./ShowsDescriptionSection.styles";
 
-import {
-  fadeAndScaleOut,
-  fadeAndScaleIn,
-}
-  from "./ShowsDescriptionSection.animations";
 import Separator from "../../../../components/general/Separator";
 
 
