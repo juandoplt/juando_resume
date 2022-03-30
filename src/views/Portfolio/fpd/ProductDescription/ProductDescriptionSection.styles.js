@@ -35,40 +35,17 @@ const ElementsList = styled.ul`
         background-size: cover;
         display: flex;
         justify-content: center; 
-        align-items: flex-end;
+        align-items: center;
         border-radius: 3px;
         margin: 0.5rem; 
         text-align: center; 
         position:relative;
-        padding-bottom: 3rem;
+        flex-direction:column;
         @media (min-width: 576px) { 
             max-width:300px;
         }
-        &:nth-child(1){
-            background-image: url(${process.env.PUBLIC_URL + '/img/portfolio/fpd/background_product_1.jpg'});
-        }
-        &:nth-child(2){
-            background-image: url(${process.env.PUBLIC_URL + '/img/portfolio/fpd/background_product_2.jpg'});
-        }
-        &:nth-child(3){
-            background-image: url(${process.env.PUBLIC_URL + '/img/portfolio/fpd/background_product_3.jpg'});
-        }
-        &:nth-child(4){
-            background-image: url(${process.env.PUBLIC_URL + '/img/portfolio/fpd/background_product_4.jpg'});
-        }
-
-        div{
-            background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#e6000000',GradientType=0 ); /* IE6-9 */
-            
-            width:100%;
-            height:100%;
-            position:absolute;
-            top:0;
-            left:0;
-            z-index:1;
+        img{
+            width: 130px
         }
         span{
             position:relative;
@@ -80,12 +57,8 @@ const ElementsList = styled.ul`
 
 
 const Product = styled.div`
-    // display: flex;
-    // align-items: center;
     padding-top: 5%;
     padding-bottom: 5%;
-    // position: relative;
-    // overflow: hidden;
     background-color:#000;
 `
 
@@ -105,9 +78,9 @@ const ProductAnimationContainer = styled(motion.div)`
 `
 
 export {
-  ToolsList,
-  ElementsList,
-  Product,
-  ProductTitle,
-  ProductAnimationContainer,
+    ToolsList,
+    ElementsList,
+    Product,
+    ProductTitle,
+    ProductAnimationContainer,
 };

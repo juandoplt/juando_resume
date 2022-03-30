@@ -1,6 +1,6 @@
 const transitionLi = {
     type: "spring",
-    stiffness: 100,
+    stiffness: 0,
     repeat: Infinity,
     duration: .2
 }

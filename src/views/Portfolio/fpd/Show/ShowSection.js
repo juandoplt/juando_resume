@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { images } from "../../../../data/imagesData";
 import Separator from "../../../../components/general/Separator";
-import { Pagination, EffectCards } from "swiper";
+import { Pagination, EffectCoverflow, Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 
 import {
@@ -21,12 +22,21 @@ const ShowSection = () => {
             <SliderContainer>
                 <SliderTitle>Shows</SliderTitle>
                 <Swiper
+                    effect={"coverflow"}
                     spaceBetween={50}
                     slidesPerView="auto"
                     centeredSlides={true}
+                    navigation={true}
                     grabCursor={true}
                     initialSlide={4}
-                    modules={[EffectCards, Pagination]}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: true,
+                      }}
+                    modules={[EffectCoverflow, Pagination, Navigation]}
                     pagination={{
                         clickable: true
                     }}
@@ -45,7 +55,7 @@ const ShowSection = () => {
                             <iframe src="https://www.youtube.com/embed/NIKdwoldzIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{ width: "100%", height: 500 }}></iframe>
                             <p style={{ color: "#fff", textAlign: "center" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut eu sem integer vitae justo eget. Consectetur lorem donec massa sapien faucibus et molestie ac.
 
-</p>
+                            </p>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -58,7 +68,7 @@ const ShowSection = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div style={{ width: 900, margin: "0 auto" }} className="noselect">
-                        <h3 style={{ color: "#fff", textAlign: "center" }}>Modo hincha - Ernesto Provitilo</h3>
+                            <h3 style={{ color: "#fff", textAlign: "center" }}>Modo hincha - Ernesto Provitilo</h3>
                             <p style={{ color: "#fff", textAlign: "center" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <iframe src="https://www.youtube.com/embed/KSsuRn3DM68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style={{ width: "100%", height: 500 }}></iframe>
                             <p style={{ color: "#fff", textAlign: "center" }}>Porta nibh venenatis cras sed felis eget velit aliquet. Nisl condimentum id venenatis a condimentum vitae. Tincidunt arcu non sodales neque sodales ut.</p>

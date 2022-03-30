@@ -33,39 +33,52 @@ const ProductDescriptionSection = () => {
                         <ProductTitle>Características del producto</ProductTitle>
                         <ElementsList>
                             <motion.li
-                                transition={transitionLi}
-                                whileTap={{
-                                    rotateY: 180
-                                }}
+                                transition={{ duration: .5, delay: .5 }}
+                                whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
+                                viewport={{ once: true }}
                             >
-                                <div></div>
+                                <motion.img
+                                    whileInView={{ y: [1, 0, 1] }}
+                                    transition={{ repeat: Infinity, duration: 2, delay: .5 }}
+                                    src={`${process.env.PUBLIC_URL + '/img/design_ux_icon.png'}`}
+                                />
                                 <span>Diseño UX/UI</span>
                             </motion.li>
                             <motion.li
-                                transition={transitionLi}
-                                whileTap={{
-                                    rotateY: 180
-                                }}
+                                transition={{ duration: .5, delay: 1.2 }}
+                                whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
+                                viewport={{ once: true }}
                             >
-                                <div></div>
+                                <motion.img
+                                    whileInView={{ y: [1, 0, 1] }}
+                                    transition={{ repeat: Infinity, duration: 2, delay: .9}}
+                                    src={`${process.env.PUBLIC_URL + '/img/mobile_development_icon.png'}`}
+                                />
                                 <span>Desarrollo mobile y web</span>
                             </motion.li>
                             <motion.li
-                                transition={transitionLi}
-                                whileTap={{
-                                    rotateY: 180
-                                }}
+                                transition={{ duration: .5, delay: 1.5 }}
+                                whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
+                                viewport={{ once: true }}
                             >
-                                <div></div>
+                                <motion.img
+                                    whileInView={{ y: [1, 0, 1] }}
+                                    transition={{ repeat: Infinity, duration: 2, delay: 1.2 }}
+                                    src={`${process.env.PUBLIC_URL + '/img/logo_design_icon.png'}`}
+                                />
+
                                 <span>Rediseño de logo</span>
                             </motion.li>
                             <motion.li
-                                transition={transitionLi}
-                                whileTap={{
-                                    rotateY: 180
-                                }}
+                                transition={{ duration: .5, delay: 1.7 }}
+                                whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
+                                viewport={{ once: true }}
                             >
-                                <div></div>
+                                <motion.img
+                                    whileInView={{ y: [1, 0, 1] }}
+                                    transition={{ repeat: Infinity, duration: 2, delay: 1.5 }}
+                                    src={`${process.env.PUBLIC_URL + '/img/audiovisual_production_icon.png'}`}
+                                />
                                 <span>Producción audiovisual</span>
                             </motion.li>
                         </ElementsList>
