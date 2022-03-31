@@ -36,7 +36,7 @@ const HeroSection = () => {
               <HeaderText>FPD</HeaderText>
               <SubHeaderText>Portal de estadísticas y noticias de fútbol</SubHeaderText>
               <DescriptionText>
-                Este es uno de los proyectos más grandes realizados, branding, desarrollo web y mobile, estructuración del backend, producción audiovisual y diseño de la interfaz y la experiencia de usuario de la app mobile.
+                Este es uno de los proyectos más grandes realizados, mi rol en este producto fue, rediseñar el logo, realizar toda la UX y UI para la app y website, buscar contenido que nos diferencie de la competencia y además realizar toda la campaña de marketing y correrla en Google ADS.
               </DescriptionText>
             </Col>
           </HeroRow>

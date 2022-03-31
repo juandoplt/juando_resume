@@ -37,6 +37,11 @@ const ShowContent = styled.div`
   justify-content:center;
   padding:2rem 0;
   flex-wrap:wrap;
+  a{
+    &:hover{
+      cursor:pointer;
+    }
+  }
   @media (min-width: 576px) { 
     flex-direction:row;
   }
@@ -46,14 +51,18 @@ const ShowVideoContent = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  padding:0.5rem;
-  img{
-    width:100%;
+  position:relative;
+  .react-player {
+    position: absolute;
+  }
+  img, .react-player {
+    padding:0.5rem;
+    width:100%!important;
     @media (min-width: 576px) { 
-      width:80%;
+      width:80%!important;
     }
     @media (min-width: 1500px) { 
-      width:60%;
+      width:60%!important;
     }
   }
   

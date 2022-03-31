@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from 'styled-components'
 
 
-const Section = styled.div`
+const DescriptionSection = styled.div`
   background-color: #efefef;
    display: flex;
    justify-content: center;
@@ -13,12 +13,12 @@ const Section = styled.div`
    overflow:hidden;
 `
 
-const AnimatedTitle = styled(motion.h1)`
+const DescriptionTitle = styled(motion.h1)`
   text-align: center;
   text-transform: uppercase;
 `
 
-const AnimatedContainer = styled(motion.div)`
+const DescriptionContent = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items:center;
@@ -27,22 +27,7 @@ const AnimatedContainer = styled(motion.div)`
   position:relative;
   flex-direction:column;
 `
-
-const AnimatedOldLogoContainer = styled(motion.div)`
-  position: absolute;
-  top: 21%
-`
-
-const AnimatedNewLogoContainer = styled(motion.div)`
-  width: 100%;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  position: relative;
-  z-index: 3
-`
-
-const AnimatedParagraph = styled(motion.p)`
+const DescriptionParagraph = styled(motion.p)`
   max-width: 90%;
   text-align: center;
   @media (min-width: 576px) { 
@@ -50,20 +35,34 @@ const AnimatedParagraph = styled(motion.p)`
   }
 `
 
-const AnimatedImage = styled(motion.img)`
-  max-height: 200px;  
+const DescriptionShows = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+  flex-direction:column;
+  div{
+    padding:1rem;
+    img{
+      border-radius:50%;
+      margin:0 auto;
+      display:block;
+      margin-bottom:1rem;
+    }
+    h4,p{
+      text-align:center;
+    }
+  }
   @media (min-width: 576px) { 
-    max-height: 244px
+    flex-direction:row;
   }
 `
 
 
 export {
-  Section,
-  AnimatedTitle,
-  AnimatedContainer,
-  AnimatedOldLogoContainer,
-  AnimatedNewLogoContainer,
-  AnimatedParagraph,
-  AnimatedImage
+  DescriptionSection,
+  DescriptionTitle,
+  DescriptionContent,
+  DescriptionParagraph,
+  DescriptionShows
 };

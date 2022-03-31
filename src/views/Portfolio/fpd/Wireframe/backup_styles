@@ -26,8 +26,8 @@ const AnimationContent = styled.div`
   min-height: 100vh;
   padding-top: 5%;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
+  transform: rotate(-26deg);
+  width: 320%;
   @media (min-width: 576px) { 
     width: 100%;
   }
@@ -35,7 +35,7 @@ const AnimationContent = styled.div`
 
 const Image = styled.img`
   width: 150px;
-  margin-right: 30px; 
+  margin-right: 30; 
   filter: blur(2px);
 
 @media (min-width: 576px) { 

@@ -33,7 +33,7 @@ const ProductDescriptionSection = () => {
                         <ProductTitle>Características del producto</ProductTitle>
                         <ElementsList>
                             <motion.li
-                                transition={{ duration: .5, delay: .5 }}
+                                transition={{ duration: .3, delay: .3 }}
                                 whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
                                 viewport={{ once: true }}
                             >
@@ -45,7 +45,7 @@ const ProductDescriptionSection = () => {
                                 <span>Diseño UX/UI</span>
                             </motion.li>
                             <motion.li
-                                transition={{ duration: .5, delay: 1.2 }}
+                                transition={{ duration: .5, delay: .5 }}
                                 whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
                                 viewport={{ once: true }}
                             >
@@ -57,7 +57,7 @@ const ProductDescriptionSection = () => {
                                 <span>Desarrollo mobile y web</span>
                             </motion.li>
                             <motion.li
-                                transition={{ duration: .5, delay: 1.5 }}
+                                transition={{ duration: .5, delay: .8 }}
                                 whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
                                 viewport={{ once: true }}
                             >
@@ -70,7 +70,7 @@ const ProductDescriptionSection = () => {
                                 <span>Rediseño de logo</span>
                             </motion.li>
                             <motion.li
-                                transition={{ duration: .5, delay: 1.7 }}
+                                transition={{ duration: .5, delay: 1 }}
                                 whileInView={{ background: ["rgba(255,255,255,1)", "rgba(255,255,255,0)"] }}
                                 viewport={{ once: true }}
                             >

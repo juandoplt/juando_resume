@@ -37,7 +37,7 @@ const imageVariants = {
 
 const textVariants = {
   hover: {
-    y: -20,
+    y: -150,
     opacity: 1,
   }
 };
@@ -63,7 +63,7 @@ const MotionTitle = styled(motion.h1)`
   bottom:-10px;
   color:#fff;
   text-transform:uppercase;
-  font-size:1.4rem;
+  font-size:2.4rem;
 `
 
 
