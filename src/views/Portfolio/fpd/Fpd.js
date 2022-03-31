@@ -8,6 +8,7 @@ import Hero from "./Hero/HeroSection";
 import ProductDescription from "./ProductDescription/ProductDescriptionSection";
 import Logo from "./Logo/LogoSection";
 import Wireframe from "./Wireframe/WireframeSection";
+import Mindmap from "./Mindmap/MindmapSection";
 import App from "./App/AppSection";
 import Keypoints from "./Keypoints/KeypointsSection";
 import Show from "./Show/ShowSection";
@@ -26,6 +27,7 @@ const FpdPage = () => {
       <ProductDescription />
       <Logo />
       <Wireframe />
+      <Mindmap />
       <App />
       <Keypoints />
       <ShowsDescription />

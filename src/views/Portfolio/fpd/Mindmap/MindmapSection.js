@@ -3,18 +3,18 @@ import PulseDot from "../../../../components/general/pulseDot/pulseDot";
 import Separator from "../../../../components/general/Separator";
 
 import {
-  KeyPointsContainer,
-  KeyPointsRow,
-  KeyPointsTitle,
-} from "./KeypointsSection.styles";
+  MindmapContainer,
+  MindmapRow,
+  MindmapTitle,
+} from "./MindmapSection.styles";
 
-const KeypointsSection = () => {
+const MindmapSection = () => {
   return (
     <>
-      <KeyPointsContainer>
+      <MindmapContainer>
         <Container>
-          <KeyPointsTitle>Vistas complejas</KeyPointsTitle>
-          <KeyPointsRow>
+          <MindmapTitle>Mapa de la App</MindmapTitle>
+          <MindmapRow>
             <Col lg={6}>
               <h3 style={{ padding: "2% 5%" }}>Creación de grupos</h3>
               <p style={{ padding: "2% 5%" }}>
@@ -31,13 +31,13 @@ const KeypointsSection = () => {
                 </video>
               </div>
             </Col>
-          </KeyPointsRow>
+          </MindmapRow>
         </Container>
-      </KeyPointsContainer>
+      </MindmapContainer>
       <Separator fill="#fff" backgroundColor="#000" translateY="-2px"/>
-      <KeyPointsContainer background="black">
+      <MindmapContainer background="black">
         <Container>
-          <KeyPointsRow>
+          <MindmapRow>
             <Col lg={6}>
               <div style={{ position: "relative", width: "100%", margin: "0 auto" }}>
                 <PulseDot right="12%" top="9%" size={20} color="rgba(255,0,0,.9)" />
@@ -57,13 +57,13 @@ const KeypointsSection = () => {
                 En cambio el objetivo busqué guardar datos siempre que el usuario cargue resultados, de esa forma el usuario no tiene que pensar si se guardaron o no, ya que un pequeño check le indica que se guardo con éxito. Esto también aligera mucho la carga en nuestra API.
               </p>
             </Col>
-          </KeyPointsRow>
+          </MindmapRow>
         </Container>
-      </KeyPointsContainer>
+      </MindmapContainer>
       <Separator backgroundColor="#fff" fill="#000" translateY="-2px"/>
-      <KeyPointsContainer>
+      <MindmapContainer>
         <Container>
-          <KeyPointsRow>
+          <MindmapRow>
             <Col lg={6}>
             <h3 style={{ padding: "2% 5%",color:"#3a3a3a" }}>Widgets de equipos</h3>
               <p style={{ padding: "2% 5%",color:"#3a3a3a" }}>
@@ -84,12 +84,12 @@ const KeypointsSection = () => {
                 <img src={`${process.env.PUBLIC_URL + '/img/portfolio/fpd/widget.png'}`} alt="" style={{ width: "100%", margin: "0 auto", display: "block" }} className="noselect" />
               </div>
             </Col>
-          </KeyPointsRow>
+          </MindmapRow>
         </Container>
 
-      </KeyPointsContainer>
+      </MindmapContainer>
     </>
   )
 }
 
-export default KeypointsSection;
+export default MindmapSection;

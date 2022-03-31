@@ -5,6 +5,16 @@ const Title = styled.h1`
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0px 0 50px black;
+  max-width:50%;
+`
+
+const SubTitle = styled.h2`
+  color: #fff;
+  text-align: center;
+  font-size:1.5rem;
+  font-weight:normal;
+  text-shadow: 0px 0 50px black;
+  max-width:50%;
 `
 
 const TitleContainer = styled.div`
@@ -12,6 +22,7 @@ const TitleContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-direction:column;
   height: 100%;
   position: absolute;
   z-index: 2;
@@ -56,5 +67,6 @@ export {
   Image,
   AnimationContainer,
   TitleContainer,
+  SubTitle,
   Title
 };

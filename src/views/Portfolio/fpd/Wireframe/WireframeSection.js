@@ -5,6 +5,7 @@ import {
     AnimationContent,
     AnimationContainer,
     TitleContainer,
+    SubTitle,
     Title
 } from './WireframeSection.styles';
 
@@ -16,6 +17,7 @@ const WireframeSection = () => {
             <AnimationContainer>
                 <TitleContainer>
                     <Title>La APP</Title>
+                    <SubTitle>Esta app de fútbol consta de noticias, estadísticas de multiples ligas y también un PRODE, para realizar apuestas sobre los equipos por premios ofrecidos.</SubTitle>
                 </TitleContainer>
                 <AnimationContent>
                     <Parallax offset={-220}>
