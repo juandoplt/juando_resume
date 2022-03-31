@@ -54,6 +54,10 @@ const ShowVideoContent = styled.div`
   position:relative;
   .react-player {
     position: absolute;
+    max-height:500px;
+  }
+  img{
+    max-height:500px;
   }
   img, .react-player {
     padding:0.5rem;
