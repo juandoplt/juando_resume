@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.bbca88bc.css",
-    "main.js": "/static/js/main.f8be4a6a.js",
+    "main.js": "/static/js/main.c059519e.js",
     "static/js/787.f1e2a2be.chunk.js": "/static/js/787.f1e2a2be.chunk.js",
     "static/media/daftpunk.mp3": "/static/media/daftpunk.d0c72741049dedaef925.mp3",
     "static/media/beeges.mp3": "/static/media/beeges.991e50afabf672461fd3.mp3",
     "static/media/xfiles.mp3": "/static/media/xfiles.275074d2d3c02ecba62a.mp3",
     "static/media/erotic.mp3": "/static/media/erotic.cd66b399145b2cc1eab0.mp3",
-    "static/media/phone_mock.png": "/static/media/phone_mock.585f87ccc37d452cd2a6.png",
     "static/media/iphone-10.png": "/static/media/iphone-10.f4c538ad1b2245e4e510.png",
     "static/media/iphone-9.png": "/static/media/iphone-9.09c34d88fead48b2856a.png",
     "static/media/iphone-5.png": "/static/media/iphone-5.e0c5f5783e887e1ba5a8.png",
@@ -40,11 +39,11 @@
     "static/media/logo.png": "/static/media/logo.61b5f6ecdd4da6352abd.png",
     "index.html": "/index.html",
     "main.bbca88bc.css.map": "/static/css/main.bbca88bc.css.map",
-    "main.f8be4a6a.js.map": "/static/js/main.f8be4a6a.js.map",
+    "main.c059519e.js.map": "/static/js/main.c059519e.js.map",
     "787.f1e2a2be.chunk.js.map": "/static/js/787.f1e2a2be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bbca88bc.css",
-    "static/js/main.f8be4a6a.js"
+    "static/js/main.c059519e.js"
   ]
 }
