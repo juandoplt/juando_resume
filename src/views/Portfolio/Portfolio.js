@@ -82,9 +82,8 @@ const Thumbnail = ({ id, project, thumb, title, i }) => (
           transition={transition}
         >{title}</MotionTitle>
         <motion.img
-          //src={`/img/portfolio/${project}/${thumb}.jpg`}
           src={`${process.env.PUBLIC_URL + '/img/portfolio/' + project + '/' + thumb + '.jpg'}`}
-          alt="The Barbican"
+          alt="Portfolio"
           variants={imageVariants}
           transition={transition}
           style={{ width: "100%" }}

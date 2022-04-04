@@ -1,12 +1,18 @@
 import { useEffect } from "react";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Paragraph, Title } from "../../components/text";
 import Animation from "../../utils/animation";
 import styled from 'styled-components'
 import { Col, Container, Row } from "react-bootstrap";
 import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
-import Section from '../../components/general/Section';
+import { Plock } from "react-plock";
+import { motion } from "framer-motion"
+import Parallax from "../../components/general/ParrallaxImages";
 
+const Section = styled(Container)`
+    padding-top:5rem;
+    color:#3a3a3a
+`
 
 const ToolsList = styled.ul`
   list-style-type: none;
@@ -33,49 +39,209 @@ const PlaygamesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
+
+  const breakpoints = [
+    { size: 640, columns: 1 },
+    { size: 768, columns: 2 },
+    { size: 1024, columns: 3 },
+  ];
+
+  const imageVariants = {
+    hover: {
+      scale: 1.1,
+      filter: "grayscale(70%) blur(4px)",
+    }
+  };
+
   const transition = {
     delay: 0.2
   }
 
   return (
     <Animation transition={.45}>
-      <Section paddingTop="15%">
-        <Container>
-          <Row>
-            <Col>
-              <Title size="4rem" fontWeight="bold" letterSpacing="-3px">Playgames</Title>
-              <Title size="2rem" fontWeight="500">Portal de estadísticas y noticias de fútbol, App, Web y contenido en youtube</Title>
-              <Title color="#000" size="1.5rem" fontWeight="500">Descripción de trabajo</Title>
-              <Paragraph color="#000" size="1rem">
-                Este es uno de los proyectos más grandes realizados, branding, desarrollo web y mobile, estructuración del backend, producción audiovisual y diseño de la interfaz y la experiencia de usuario de la app mobile.
-              </Paragraph>
+      <Section>
+        <Row>
+          <Col>
+            <Title size="4rem" fontWeight="bold" letterSpacing="-3px">Playgames</Title>
+            <Title size="2rem" fontWeight="500">Portal de noticias gamer y juegos</Title>
+            <Title color="#000" size="1.5rem" fontWeight="500">Descripción de trabajo</Title>
+            <Paragraph color="#000" size="1rem">
+              Próximamente más desarrollo...
+            </Paragraph>
 
+          </Col>
+          <Col>
+            <Title>Elementos</Title>
+            <ElementsList>
+              <li>
+                • Diseño UX/UI.
+              </li>
+              <li>
+                • Desarrollo sitio web.
+              </li>
+              <li>
+                • Rediseño de logo.
+              </li>
+            </ElementsList>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/001.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
             </Col>
-            <Col>
-              <Title>Elementos</Title>
-              <ElementsList>
-                <li>• Diseño UX/UI.</li>
-                <li>• Desarrollo App mobile y sitio web.</li>
-                <li>• Rediseño de logo.</li>
-                <li>• Producción audiovisual.</li>
-              </ElementsList>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/02.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
 
-              <Title>Herramientas utilizadas</Title>
-              <ToolsList>
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.1} text="React JS" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.2} text="React Native" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.3} text="Wordpress" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.4} text="Html" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.5} text="JS" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.6} text="Photoshop" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.7} text="Premiere" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.8} text="After effects" />
-                <AnimatedListItem scale={[1, 1.2, 1]} duration={.5} delay={.9} text="Mysql" />
-              </ToolsList>
-            </Col>
-          </Row>
-        </Container>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen0.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen1.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen2.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen3.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen4.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen5.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen6.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen7.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen8.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen9.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen10.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen11.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+              />
+            </Parallax>
+          </Col>
+        </Row>
       </Section>
     </Animation>
   );

@@ -10,10 +10,13 @@ import FpdPage from './views/Portfolio/fpd/Fpd';
 import LadderCupPage from './views/Portfolio/LadderCup';
 import PlaygamesPage from './views/Portfolio/Playgames';
 import MasTenisPage from './views/Portfolio/MasTenis';
+import LigaEpicaPage from './views/Portfolio/LigaEpica';
 import ArrimatePage from './views/Portfolio/Arrimate';
 import NotFound from './views/NotFound';
 import { useEffect } from 'react';
 import { Placeholder } from "react-bootstrap";
+import VariosLogosPage from "./views/Portfolio/VariosLogos";
+import SitioPage from "./views/Portfolio/Sitio";
 
 const App = () => {
   const queryString = require('query-string');
@@ -47,7 +50,9 @@ const App = () => {
         <Route path="/playgames" element={<PlaygamesPage />} />
         <Route path="/arrimate" element={<ArrimatePage />} />
         <Route path="/mastenis" element={<MasTenisPage />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/ligaepica" element={<LigaEpicaPage />} />
+        <Route path="/sitio" element={<SitioPage />} />
+        <Route path="/logos" element={<VariosLogosPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
