@@ -25,7 +25,7 @@ const Footer = () => {
                     <List>
                         <li><Link to="/" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Inicio</Link></li>
                         <li><Link to="/portfolio" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Portfolio</Link></li>
-                        <li><Link to="/contacto" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Contacto</Link></li>
+                        {/* <li><Link to="/contacto" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Contacto</Link></li> */}
                         <li><a href="" target="_blank" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Curriculum</a></li>
                         <li><a href="" target="_blank" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Linkedin</a></li>
                         <li><a href="" target="_blank" style={{ fontSize: ".7rem", textDecoration: "none", color: "#000", textTransform: "uppercase", fontWeight: "600" }}>Behance</a></li>
