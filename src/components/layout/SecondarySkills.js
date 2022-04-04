@@ -96,7 +96,7 @@ const SecondarySkills = () => {
                   <ThirdCanvas></ThirdCanvas>
                 </motion.div>
                 <TitleContainer>Desarrollo de<BigTitle>productos</BigTitle></TitleContainer>
-                <Description>Crear es mi pasión y lo más entretenido para mí es desarrollar nuevos prodcutos</Description>
+                <Description>Crear es mi pasión por eso me dedico de lleno a crear productos.</Description>
               </motion.div>
 
             </ListItemLeft>
@@ -114,7 +114,7 @@ const SecondarySkills = () => {
                   <FourthCanvas></FourthCanvas>
                 </motion.div>
                 <TitleContainer>Estrategias de <BigTitle>marketing</BigTitle></TitleContainer>
-                <Description>No hay diseño sin una visión de marketing.</Description>
+                <Description>Para mi todo producto necesita su estrategia de marketing para que logre tener exito.</Description>
               </motion.div>
             </ListItemRight>
           </List>
