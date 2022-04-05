@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bbca88bc.css",
-    "main.js": "/static/js/main.2753985e.js",
+    "main.js": "/static/js/main.10da9d97.js",
     "static/js/787.f1e2a2be.chunk.js": "/static/js/787.f1e2a2be.chunk.js",
     "static/media/daftpunk.mp3": "/static/media/daftpunk.d0c72741049dedaef925.mp3",
     "static/media/beeges.mp3": "/static/media/beeges.991e50afabf672461fd3.mp3",
@@ -39,11 +39,11 @@
     "static/media/logo.png": "/static/media/logo.61b5f6ecdd4da6352abd.png",
     "index.html": "/index.html",
     "main.bbca88bc.css.map": "/static/css/main.bbca88bc.css.map",
-    "main.2753985e.js.map": "/static/js/main.2753985e.js.map",
+    "main.10da9d97.js.map": "/static/js/main.10da9d97.js.map",
     "787.f1e2a2be.chunk.js.map": "/static/js/787.f1e2a2be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bbca88bc.css",
-    "static/js/main.2753985e.js"
+    "static/js/main.10da9d97.js"
   ]
 }
