@@ -8,6 +8,8 @@ import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
 import { Plock } from "react-plock";
 import { motion } from "framer-motion"
 import Parallax from "../../components/general/ParrallaxImages";
+import RelatedWorks from "../../components/general/RelatedWorks";
+import Footer from "../../components/general/Footer";
 
 const Section = styled(Container)`
     padding-top:5rem;
@@ -62,12 +64,9 @@ const SitioPage = () => {
       <Section>
         <Row>
           <Col>
-            <Title size="4rem" fontWeight="bold" letterSpacing="-3px">Playgames</Title>
-            <Title size="2rem" fontWeight="500">Portal de noticias gamer y juegos</Title>
+            <Title size="4rem" fontWeight="bold" letterSpacing="-3px">Sitio</Title>
+            <Title size="2rem" fontWeight="500">Este sitio está realizado integramente en React JS</Title>
             <Title color="#000" size="1.5rem" fontWeight="500">Descripción de trabajo</Title>
-            <Paragraph color="#000" size="1rem">
-              Realizado enteramente en React Native
-            </Paragraph>
             <Paragraph color="#000" size="1rem">
               Próximamente más desarrollo
             </Paragraph>
@@ -76,6 +75,8 @@ const SitioPage = () => {
 
         </Row>
       </Section>
+      <RelatedWorks left="playgames" right="logos" />
+      <Footer />
     </Animation>
   );
 }

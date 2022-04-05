@@ -8,6 +8,8 @@ import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
 import { Plock } from "react-plock";
 import { motion } from "framer-motion"
 import Parallax from "../../components/general/ParrallaxImages";
+import RelatedWorks from "../../components/general/RelatedWorks";
+import Footer from "../../components/general/Footer";
 
 const Section = styled(Container)`
     padding-top:5rem;
@@ -262,6 +264,8 @@ const LadderCupPage = () => {
           </Col>
         </Row>
       </Section>
+      <RelatedWorks left="arrimate" right="logos" />
+      <Footer />
     </Animation>
   );
 }

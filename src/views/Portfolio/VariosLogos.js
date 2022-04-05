@@ -7,6 +7,9 @@ import { Col, Container, Row } from "react-bootstrap";
 import AnimatedListItem from "../../components/portfolio/AnimatedListItem";
 import { motion } from "framer-motion"
 import Parallax from "../../components/general/ParrallaxImages";
+import RelatedWorks from "../../components/general/RelatedWorks";
+import Footer from "../../components/general/Footer";
+
 const Section = styled(Container)`
     padding-top:5rem;
     color:#3a3a3a
@@ -54,14 +57,14 @@ const VariosLogosPage = () => {
       <Section>
         <Row>
           <Col>
-            <Title size="4rem" fontWeight="bold" letterSpacing="-3px" textAlign="center">Logos Varios</Title>
+            <Title size="4rem" fontWeight="bold" letterSpacing="-3px" textAlign="center">Varios logos</Title>
           </Col>
         </Row>
         <Row>
           <Col>
             <Parallax>
               <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-oready.png'}`}
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-oready.jpg'}`}
                 alt="Portfolio"
                 variants={imageVariants}
                 transition={transition}
@@ -72,7 +75,7 @@ const VariosLogosPage = () => {
           <Col>
             <Parallax>
               <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-1block.png'}`}
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-1block.jpg'}`}
                 alt="Portfolio"
                 variants={imageVariants}
                 transition={transition}
@@ -83,7 +86,7 @@ const VariosLogosPage = () => {
           <Col>
             <Parallax>
               <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-laddercup.png'}`}
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-laddercup.jpg'}`}
                 alt="Portfolio"
                 variants={imageVariants}
                 transition={transition}
@@ -93,13 +96,50 @@ const VariosLogosPage = () => {
           </Col>
 
 
-      </Row>
-      <Row>
+        </Row>
+        <Row>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-bicicity.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "300px", display: "block", margin: "4% auto" }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-fpd.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "300px", display: "block", margin: "4% auto" }}
+              />
+            </Parallax>
+          </Col>
+          <Col>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/logos/logo-mastenis.jpg'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "300px", display: "block", margin: "4% auto" }}
+              />
+            </Parallax>
+          </Col>
+        </Row>
+        <Row>
           <Col>
             <Title size="1rem" fontWeight="700" letterSpacing="1px" textAlign="center">Próximamente más desarrollo...</Title>
           </Col>
-      </Row>
-    </Section>
+        </Row>
+      </Section>
+      <RelatedWorks left="fpd" right="mastenis" />
+      <Footer />
     </Animation >
   );
 }
