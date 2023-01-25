@@ -112,8 +112,8 @@ const Software = () => {
                                         transition={{ delay: .4 }}
                                         viewport={{ once: true }}
                                     >
-                                        <Image src={`${process.env.PUBLIC_URL + '/img/xd_icon.png'}`} alt="" />
-                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Adobe XD</Paragraph>
+                                        <Image src={`${process.env.PUBLIC_URL + '/img/figma_icon.png'}`} alt="" />
+                                        <Paragraph size=".8rem" color="#FFF" textAlign="center">Figma</Paragraph>
                                     </motion.div>
                                 </ListItem>
                                 <ListItem>
