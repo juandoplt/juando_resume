@@ -10,6 +10,10 @@ import { motion } from "framer-motion"
 import Parallax from "../../components/general/ParrallaxImages";
 import RelatedWorks from "../../components/general/RelatedWorks";
 import Footer from "../../components/general/Footer";
+import ProductDescriptionSection from "./playgames/ProductDescription/ProductDescriptionSection";
+import AppSection from "./playgames/App/AppSection";
+import HeroSection from "./playgames/Hero/HeroSection";
+import Separator from "../../components/general/Separator";
 
 const Section = styled(Container)`
     padding-top:5rem;
@@ -38,9 +42,9 @@ const ElementsList = styled.ul`
 const PlaygamesPage = () => {
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
 
   const breakpoints = [
     { size: 640, columns: 1 },
@@ -61,185 +65,238 @@ const PlaygamesPage = () => {
 
   return (
     <Animation transition={.45}>
+      <HeroSection />
+      <ProductDescriptionSection />
+      <AppSection />
+      <div style={{ backgroundColor: "#000", display: "flex", height: 400, justifyContent: "center", alignItems: "center" }}>
+        
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-1.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={-20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-2.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-3.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={-20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-1.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-2.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={-20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-3.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-1.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={-20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-2.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-3.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={-20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-1.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-2.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={-20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-3.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+        <Parallax offset={20}>
+          <motion.img
+            src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/ghost-1.png'}`}
+            alt="Portfolio"
+            variants={imageVariants}
+            transition={transition}
+            style={{ width: "auto", height: "100px", margin: "5%", padding: "10%" }}
+          />
+        </Parallax>
+
+      </div>
+        <Separator fill="#000" backgroundColor="#fff" />
       <Section>
         <Row>
-          <Col>
-            <Title size="4rem" fontWeight="bold" letterSpacing="-3px">Playgames</Title>
-            <Title size="2rem" fontWeight="500">Portal de noticias gamer y juegos</Title>
-            <Title color="#000" size="1.5rem" fontWeight="500">Descripción de trabajo</Title>
-            <Paragraph color="#000" size="1rem">
-              Próximamente más desarrollo...
-            </Paragraph>
-
+          <div style={{ marginBottom: "5%" }}>
+            <Title size="3rem" textAlign="center" fontWeight="bold" letterSpacing="-3px">DESARROLLO SITIO WEB</Title>
+          </div>
+        </Row>
+        <Row style={{ marginTop: "5%", marginBottom: "5%" }}>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-10.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "auto", height: "700px", margin: "5% auto" }}
+              />
+            </Parallax>
           </Col>
-          <Col>
-            <Title>Elementos</Title>
-            <ElementsList>
-              <li>
-                • Diseño UX/UI.
-              </li>
-              <li>
-                • Desarrollo sitio web.
-              </li>
-              <li>
-                • Rediseño de logo.
-              </li>
-            </ElementsList>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-11.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "auto", height: "700px", margin: "5% auto" }}
+              />
+            </Parallax>
+          </Col>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-12.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "auto", height: "700px", margin: "5% auto" }}
+              />
+            </Parallax>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "5%", marginBottom: "5%" }}>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-13.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "auto", height: "700px", marginBottom: "5%" }}
+              />
+            </Parallax>
+          </Col>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-14.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "auto", height: "700px", marginBottom: "5%" }}
+              />
+            </Parallax>
+          </Col>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
+            <Parallax>
+              <motion.img
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-15.png'}`}
+                alt="Portfolio"
+                variants={imageVariants}
+                transition={transition}
+                style={{ width: "auto", height: "700px", marginBottom: "5%" }}
+              />
+            </Parallax>
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
             <Parallax>
               <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/001.png'}`}
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-16.png'}`}
                 alt="Portfolio"
                 variants={imageVariants}
                 transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-            </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/02.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+                style={{ width: "auto", height: "700px", marginBottom: "5%" }}
               />
             </Parallax>
           </Col>
-          <Col>
-
+          <Col style={{ display: "flex", justifyContent: "center" }}>
             <Parallax>
               <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen0.jpg'}`}
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-17.png'}`}
                 alt="Portfolio"
                 variants={imageVariants}
                 transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+                style={{ width: "auto", height: "700px", marginBottom: "5%" }}
               />
             </Parallax>
           </Col>
-          <Col>
+          <Col style={{ display: "flex", justifyContent: "center" }}>
             <Parallax>
               <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen1.jpg'}`}
+                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen-18.png'}`}
                 alt="Portfolio"
                 variants={imageVariants}
                 transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen2.jpg'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen3.jpg'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen4.jpg'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen5.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen6.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen7.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen8.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen9.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen10.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
-              />
-            </Parallax>
-          </Col>
-          <Col>
-            <Parallax>
-              <motion.img
-                src={`${process.env.PUBLIC_URL + '/img/portfolio/playgames/screen11.png'}`}
-                alt="Portfolio"
-                variants={imageVariants}
-                transition={transition}
-                style={{width: "auto", height: "500px",marginBottom:"5%"  }}
+                style={{ width: "auto", height: "700px", marginBottom: "5%" }}
               />
             </Parallax>
           </Col>
